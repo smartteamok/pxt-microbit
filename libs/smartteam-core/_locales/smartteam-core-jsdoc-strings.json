@@ -1,0 +1,5 @@
+{
+  "smartteamCore.disableLedMatrix": "Desactiva la matriz LED para evitar interferencias con sensores en P10.",
+  "smartteamCore.enableLedMatrix": "Vuelve a activar la matriz LED de la micro:bit.",
+  "smartteamCore.waitMs": "Espera la cantidad de milisegundos indicada."
+}

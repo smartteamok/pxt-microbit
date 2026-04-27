@@ -1,0 +1,15 @@
+{
+  "smartteamMotors.controlFan|block": "Ventilador %action",
+  "smartteamMotors.moveRobotWithSpeed|block": "Mover %direction %motor con velocidad %speed",
+  "smartteamMotors.moveRobot|block": "Mover %direction %motor",
+  "smartteamMotors.moveServoGradually|block": "Mover servo en %port a %degrees grados gradualmente cada %ms ms",
+  "smartteamMotors.setServoAngle|block": "Posicionar servo en %port a %degrees grados",
+  "smartteamMotors.stopRobot|block": "Parar %motor",
+  "smartteamMotors.turnDcMotor|block": "Girar el MOTOR DC en %pin con velocidad %speed",
+  "smartteamMotors|block": "Motores",
+  "{id:category}SmartteamMotors": "SmartteamMotors",
+  "{id:group}Motor DC": "Motor DC",
+  "{id:group}Robot": "Robot",
+  "{id:group}Servo": "Servo",
+  "{id:group}Ventilador": "Ventilador"
+}

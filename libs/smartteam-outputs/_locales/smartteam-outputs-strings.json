@@ -1,0 +1,8 @@
+{
+  "smartteamOutputs.playTone|block": "Reproducir tono de %frequency Hz en %pin",
+  "smartteamOutputs.setLedBrightness|block": "Ajustar el brillo del LED en %pin a %value",
+  "smartteamOutputs.stopBuzzer|block": "Apagar zumbador",
+  "smartteamOutputs.turnLedOn|block": "Prender el LED en %pin",
+  "smartteamOutputs|block": "Salidas",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs"
+}

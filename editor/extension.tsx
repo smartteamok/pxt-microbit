@@ -23,7 +23,27 @@ pxt.editor.initExtensionsAsync = function (opts: pxt.editor.ExtensionOptions): P
         };
 
     const res: pxt.editor.ExtensionResult = {
-        hexFileImporters: []
+        hexFileImporters: [],
+        toolboxOptions: {
+            blocklyToolbox: {
+                functions: { name: "Funciones", weight: 110, color: "#3455DB" },
+                loops: { name: "Control", weight: 100, color: "#1E90FF" },
+                logic: { name: "Lógica", weight: 90, color: "#00A4A6" },
+                maths: { name: "Matemáticas", weight: 80, color: "#9400D3" },
+                variables: { name: "Variables", weight: 70, color: "#DC143C" },
+                text: { name: "Texto", weight: 60, color: "#B8860B" },
+                arrays: { name: "Variables", weight: 69, color: "#DC143C" }
+            },
+            monacoToolbox: {
+                functions: { name: "Funciones", weight: 110, color: "#3455DB" },
+                loops: { name: "Control", weight: 100, color: "#1E90FF" },
+                logic: { name: "Lógica", weight: 90, color: "#00A4A6" },
+                maths: { name: "Matemáticas", weight: 80, color: "#9400D3" },
+                variables: { name: "Variables", weight: 70, color: "#DC143C" },
+                text: { name: "Texto", weight: 60, color: "#B8860B" },
+                arrays: { name: "Variables", weight: 69, color: "#DC143C" }
+            }
+        }
     };
 
     pxt.usb.setFilters([{

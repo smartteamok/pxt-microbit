@@ -1,0 +1,14 @@
+{
+  "smartteamInputs.isColorDetected": "Detecta si el color dominante coincide con la seleccion.",
+  "smartteamInputs.isLineAt": "Detecta la posicion de una linea usando el sensor conectado a P10, P1 y P2.",
+  "smartteamInputs.readColorLevel": "Lee el nivel R, G o B del sensor de color TCS34725.",
+  "smartteamInputs.readDht11Humidity": "Lee humedad porcentual de un DHT11.",
+  "smartteamInputs.readDht11Temperature": "Lee temperatura en grados Celsius de un DHT11.",
+  "smartteamInputs.readDistanceCm": "Lee distancia en centimetros con ultrasonido en P2 (trigger) y P1 (echo).",
+  "smartteamInputs.readJoystick": "Lee el joystick conectado a P1, P2 y P10.",
+  "smartteamInputs.readLightLevel": "Lee intensidad luminosa en el puerto analogico seleccionado.",
+  "smartteamInputs.readPotentiometer": "Lee la posicion de un potenciometro.",
+  "smartteamInputs.readPushButton": "Lee el estado de un pulsador digital activo en bajo.",
+  "smartteamInputs.readSoilMoisture": "Lee humedad de suelo en el puerto analogico seleccionado.",
+  "smartteamInputs.readTouchButton": "Lee el estado de un boton tactil digital."
+}

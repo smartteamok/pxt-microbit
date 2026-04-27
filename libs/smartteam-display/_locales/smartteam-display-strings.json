@@ -1,0 +1,11 @@
+{
+  "smartteamDisplay.clearLcd|block": "Borrar pantalla LCD",
+  "smartteamDisplay.clearRgbStrip|block": "Tira RGB en %port apagar",
+  "smartteamDisplay.setRgbLed|block": "Tira RGB en %port LED %led R %red G %green B %blue",
+  "smartteamDisplay.showLcdText|block": "Pantalla LCD mostrar %text en x %x y %y",
+  "smartteamDisplay.showRgbColor|block": "Tira RGB en %port mostrar color %color en %led",
+  "smartteamDisplay|block": "Pantallas",
+  "{id:category}SmartteamDisplay": "SmartteamDisplay",
+  "{id:group}LCD": "LCD",
+  "{id:group}Tira RGB": "Tira RGB"
+}

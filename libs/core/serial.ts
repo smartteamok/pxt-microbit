@@ -26,8 +26,7 @@ const enum Delimiters {
 /**
  * Reading and writing data over a serial connection.
  */
-//% weight=2 color=#002050 icon="\uf287"
-//% advanced=true
+//% weight=54 color=#2C7485 icon="\uf287" blockNamespace=radio
 namespace serial {
     /**
      * The string used to mark a new line, default is \r\n

@@ -1,0 +1,9 @@
+{
+  "smartteamMotors.controlFan": "Controla el ventilador conectado al puerto de referencia P1/P2.",
+  "smartteamMotors.moveRobot": "Mueve el robot en la direccion indicada a velocidad media.",
+  "smartteamMotors.moveRobotWithSpeed": "Mueve el robot controlando direccion, motor y velocidad.",
+  "smartteamMotors.moveServoGradually": "Mueve un servo gradualmente hasta el angulo deseado.",
+  "smartteamMotors.setServoAngle": "Posiciona un servo en el puerto seleccionado.",
+  "smartteamMotors.stopRobot": "Detiene uno o ambos motores del robot.",
+  "smartteamMotors.turnDcMotor": "Gira un motor DC con velocidad de -100 a 100."
+}

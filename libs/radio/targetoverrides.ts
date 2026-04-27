@@ -1,3 +1,7 @@
+//% block="Comunicación"
+//% color=#2C7485
+//% weight=55
+//% icon="\uf1eb"
 namespace radio {
     export class Packet {
         /**

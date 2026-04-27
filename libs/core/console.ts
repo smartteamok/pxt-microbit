@@ -11,7 +11,7 @@ enum ConsolePriority {
 /**
  * Reading and writing data to the console output.
  */
-//% weight=12 color=#002050 icon="\uf120"
+//% weight=55 color=#2C7485 icon="\uf120" blockNamespace=radio
 //% advanced=true
 namespace console {
     type Listener = (priority: ConsolePriority, text: string) => void;

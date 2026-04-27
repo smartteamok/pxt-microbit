@@ -1,0 +1,7 @@
+{
+  "smartteamDisplay.clearLcd": "Borra la pantalla LCD 16x2 conectada por I2C.",
+  "smartteamDisplay.clearRgbStrip": "Apaga la tira RGB del puerto seleccionado.",
+  "smartteamDisplay.setRgbLed": "Ajusta el color RGB de un LED individual.",
+  "smartteamDisplay.showLcdText": "Muestra texto en la pantalla LCD en la posicion indicada.",
+  "smartteamDisplay.showRgbColor": "Enciende toda la tira RGB o un LED con un color."
+}

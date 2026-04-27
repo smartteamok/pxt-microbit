@@ -2,7 +2,7 @@
  * A sound expression.
  */
 //% fixedInstances
-//% blockNamespace=music
+//% blockNamespace=smartteamOutputs
 //% group="micro:bit (V2)"
 class SoundExpression extends music.Playable {
     constructor(private notes: string) {

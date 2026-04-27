@@ -1,4 +1,7 @@
-//% color="#D35400" icon="" block="SmartTEAM Salidas"
+//% block="Salidas"
+//% icon="\uf0eb"
+//% color="#D35400"
+//% weight=45
 namespace smartteamOutputs {
     /**
      * Enciende el LED conectado al pin seleccionado.

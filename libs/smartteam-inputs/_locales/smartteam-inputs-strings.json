@@ -1,0 +1,23 @@
+{
+  "smartteamInputs.isColorDetected|block": "Color detectado es %color",
+  "smartteamInputs.isLineAt|block": "Siguelineas %position en %port",
+  "smartteamInputs.readColorLevel|block": "Nivel de %channel en sensor de color",
+  "smartteamInputs.readDht11Humidity|block": "Humedad DHT11 en %port",
+  "smartteamInputs.readDht11Temperature|block": "Temperatura DHT11 (C) en %port",
+  "smartteamInputs.readDistanceCm|block": "Distancia (cm) en %port",
+  "smartteamInputs.readJoystick|block": "Joystick %axis en %port",
+  "smartteamInputs.readLightLevel|block": "Intensidad luminosa en %port",
+  "smartteamInputs.readPotentiometer|block": "Posicion potenciometro en %port",
+  "smartteamInputs.readPushButton|block": "Pulsador en %port",
+  "smartteamInputs.readSoilMoisture|block": "Humedad de suelo en %port",
+  "smartteamInputs.readTouchButton|block": "Tactil en %port",
+  "smartteamInputs|block": "Entradas",
+  "{id:category}SmartteamInputs": "SmartteamInputs",
+  "{id:group}Analogicas": "Analogicas",
+  "{id:group}Color": "Color",
+  "{id:group}DHT11": "DHT11",
+  "{id:group}Digitales": "Digitales",
+  "{id:group}Distancia": "Distancia",
+  "{id:group}Joystick": "Joystick",
+  "{id:group}Linea": "Linea"
+}

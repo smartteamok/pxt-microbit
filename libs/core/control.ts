@@ -1,7 +1,7 @@
 /**
 * Runtime and event utilities.
 */
-//% weight=1 color="#333333" icon="\uf233"
+//% weight=99 color="#1E90FF" icon="\uf233" blockNamespace=loops
 //% advanced=true
 namespace control {
     /**

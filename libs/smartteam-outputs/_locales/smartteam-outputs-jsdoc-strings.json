@@ -1,0 +1,6 @@
+{
+  "smartteamOutputs.playTone": "Reproduce un tono en el pin y frecuencia indicados.",
+  "smartteamOutputs.setLedBrightness": "Ajusta el brillo del LED con un valor entre 0 y 1023.",
+  "smartteamOutputs.stopBuzzer": "Apaga el zumbador activo.",
+  "smartteamOutputs.turnLedOn": "Enciende el LED conectado al pin seleccionado."
+}

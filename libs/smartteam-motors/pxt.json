@@ -7,6 +7,9 @@
     ],
     "public": true,
     "dependencies": {
-        "core": "file:../core"
+        "core": "file:../core",
+        "radio": "file:../radio",
+        "microphone": "file:../microphone",
+        "smartteam-shield": "file:../smartteam-shield"
     }
 }

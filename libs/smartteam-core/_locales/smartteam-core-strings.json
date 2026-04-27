@@ -1,0 +1,10 @@
+{
+  "smartteamCore.disableLedMatrix|block": "Deshabilitar matriz LED",
+  "smartteamCore.enableLedMatrix|block": "Habilitar matriz LED",
+  "smartteamCore.waitMs|block": "Esperar (ms) %ms",
+  "smartteamCore|block": "Control",
+  "{id:category}Loops": "Loops",
+  "{id:category}SmartteamCore": "SmartteamCore",
+  "{id:group}Configuracion": "Configuracion",
+  "{id:group}Tiempo": "Tiempo"
+}

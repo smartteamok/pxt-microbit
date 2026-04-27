@@ -1,0 +1,5 @@
+{
+  "smartteamShield.AnalogPort": "Puertos analogicos disponibles del shield SmartTEAM.",
+  "smartteamShield.DigitalPort": "Puertos digitales del shield SmartTEAM.",
+  "smartteamShield.JoystickPort": "Puerto fijo usado por el joystick del kit de referencia."
+}
