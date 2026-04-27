@@ -1,0 +1,12 @@
+{
+    "name": "smartteam-inputs",
+    "description": "smartteam-inputs package for SmartTEAM",
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

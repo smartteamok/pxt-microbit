@@ -1,0 +1,12 @@
+{
+    "name": "smartteam-motors",
+    "description": "smartteam-motors package for SmartTEAM",
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

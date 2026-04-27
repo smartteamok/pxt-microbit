@@ -20,7 +20,14 @@
         "libs/bitmap",
         "libs/fonts",
         "libs/color",
-        "libs/audio-recording"
+        "libs/audio-recording",
+        "libs/smartteam-core",
+        "libs/smartteam-outputs",
+        "libs/smartteam-motors",
+        "libs/smartteam-inputs",
+        "libs/smartteam-display",
+        "libs/smartteam-shield",
+        "libs/smartteam-course-config"
     ],
     "cloud": {
         "workspace": false,

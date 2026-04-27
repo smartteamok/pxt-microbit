@@ -1,0 +1,13 @@
+{
+    "name": "smartteam-course-config",
+    "description": "smartteam-course-config package for SmartTEAM",
+    "files": [
+        "config.ts",
+        "course-config.json",
+        "README.md"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

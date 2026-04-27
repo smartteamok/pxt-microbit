@@ -1,0 +1,12 @@
+{
+    "version": 1,
+    "grade": "base",
+    "enabledNamespaces": [
+        "smartteamCore",
+        "smartteamOutputs",
+        "smartteamMotors",
+        "smartteamInputs",
+        "smartteamDisplay"
+    ],
+    "notes": "Placeholder only. Not wired into UI or toolbox filtering yet."
+}

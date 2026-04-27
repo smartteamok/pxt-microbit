@@ -3,7 +3,12 @@
     "dependencies": {
         "core": "file:../core",
         "radio": "file:../radio",
-        "microphone": "file:../microphone"
+        "microphone": "file:../microphone",
+        "smartteam-core": "file:../smartteam-core",
+        "smartteam-outputs": "file:../smartteam-outputs",
+        "smartteam-motors": "file:../smartteam-motors",
+        "smartteam-inputs": "file:../smartteam-inputs",
+        "smartteam-display": "file:../smartteam-display"
     },
     "description": "",
     "files": [
