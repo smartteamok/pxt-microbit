@@ -1,0 +1,90 @@
+{
+    "version": 1,
+    "newProjectOptionGroups": [
+        {
+            "id": "smartteamCourse",
+            "label": "Selecciona el curso",
+            "required": true,
+            "style": "buttons",
+            "options": [
+                {
+                    "id": "grade1",
+                    "label": "1.º grado",
+                    "enabled": true,
+                    "projectConfig": {
+                        "smartteam": {
+                            "course": "grade1"
+                        }
+                    },
+                    "toolboxFilter": {
+                        "namespaces": {
+                            "basic": "hidden",
+                            "input": "hidden",
+                            "music": "hidden",
+                            "led": "hidden",
+                            "light": "hidden",
+                            "pins": "hidden",
+                            "functions": "hidden",
+                            "logic": "hidden",
+                            "Math": "hidden",
+                            "variables": "hidden",
+                            "text": "hidden",
+                            "arrays": "hidden",
+                            "addpackage": "hidden",
+                            "radio": "hidden",
+                            "serial": "hidden",
+                            "smartteamDigitalInputs": "hidden",
+                            "smartteamAnalogInputs": "hidden",
+                            "smartteamDisplay": "hidden"
+                        },
+                        "blocks": {
+                            "pxt-on-start": "hidden",
+                            "device_while": "hidden",
+                            "pxt_controls_for": "hidden",
+                            "pxt_controls_for_of": "hidden",
+                            "break_keyword": "hidden",
+                            "continue_keyword": "hidden",
+                            "smartteam_control_if_then": "hidden",
+                            "smartteam_control_on_logo_pressed": "hidden",
+                            "smartteam_control_start_stopwatch": "hidden",
+                            "smartteam_control_stopwatch": "hidden",
+                            "smartteam_outputs_rgb_leds_color": "hidden",
+                            "smartteam_outputs_rgb_leds_rgb": "hidden",
+                            "smartteam_motors_robot_move": "hidden",
+                            "smartteam_motors_robot_move_speed": "hidden",
+                            "smartteam_motors_robot_stop": "hidden",
+                            "smartteam_motors_fan_control": "hidden",
+                            "smartteam_motors_servo_set_angle": "hidden",
+                            "smartteam_motors_servo_move_gradually": "hidden"
+                        }
+                    }
+                },
+                {
+                    "id": "grade6",
+                    "label": "6.º grado",
+                    "enabled": true,
+                    "projectConfig": {
+                        "smartteam": {
+                            "course": "grade6"
+                        }
+                    },
+                    "toolboxFilter": {
+                        "namespaces": {
+                            "basic": "hidden",
+                            "input": "hidden",
+                            "music": "hidden",
+                            "led": "hidden",
+                            "light": "hidden",
+                            "pins": "hidden"
+                        },
+                        "blocks": {}
+                    }
+                }
+            ]
+        }
+    ],
+    "notes": [
+        "The filter only controls toolbox visibility; it does not remove APIs or dependencies.",
+        "Some SmartTEAM block IDs referenced here are expected IDs from the SmartTEAM package design and may become active when those packages are present on this branch."
+    ]
+}

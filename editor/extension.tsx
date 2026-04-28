@@ -7,6 +7,37 @@ import * as dialogs from "./dialogs";
 import * as flash from "./flash";
 import * as patch from "./patch";
 
+declare function require(path: string): any;
+
+interface SmartTeamCourseOption extends pxt.editor.NewProjectOption {
+    enabled?: boolean;
+}
+
+interface SmartTeamCourseOptionGroup extends pxt.editor.NewProjectOptionGroup {
+    options: SmartTeamCourseOption[];
+}
+
+interface SmartTeamCourseConfig {
+    newProjectOptionGroups: SmartTeamCourseOptionGroup[];
+}
+
+const smartTeamCourseConfig = require("../../libs/smartteam-course-config/course-config.json") as SmartTeamCourseConfig;
+
+function getSmartTeamNewProjectOptionGroups(): pxt.editor.NewProjectOptionGroup[] {
+    return (smartTeamCourseConfig.newProjectOptionGroups || []).map(group => ({
+        ...group,
+        options: group.options
+            .filter(option => option.enabled !== false)
+            .map(option => ({
+                id: option.id,
+                label: option.label,
+                disabled: option.disabled || option.enabled === false,
+                projectConfig: option.projectConfig,
+                toolboxFilter: option.toolboxFilter
+            }))
+    }));
+}
+
 pxt.editor.initExtensionsAsync = function (opts: pxt.editor.ExtensionOptions): Promise<pxt.editor.ExtensionResult> {
     pxt.debug('loading microbit target extensions...')
 
@@ -23,7 +54,8 @@ pxt.editor.initExtensionsAsync = function (opts: pxt.editor.ExtensionOptions): P
         };
 
     const res: pxt.editor.ExtensionResult = {
-        hexFileImporters: []
+        hexFileImporters: [],
+        newProjectOptionGroups: getSmartTeamNewProjectOptionGroups()
     };
 
     pxt.usb.setFilters([{
