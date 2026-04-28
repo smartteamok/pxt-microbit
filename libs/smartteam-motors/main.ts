@@ -1,6 +1,6 @@
 //% block="Motores"
 //% icon="\uf1b9"
-//% color="#8E44AD"
+//% color="#42A5F5"
 //% weight=35
 //% groups='["Motor DC","Robot","Servo","Ventilador"]'
 namespace smartteamMotors {

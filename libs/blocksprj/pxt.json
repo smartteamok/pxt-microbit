@@ -15,5 +15,15 @@
         "main.blocks",
         "main.ts",
         "README.md"
-    ]
+    ],
+    "toolboxFilter": {
+        "namespaces": {
+            "input": "hidden",
+            "music": "hidden",
+            "led": "hidden",
+            "light": "hidden",
+            "pins": "hidden"
+        },
+        "blocks": {}
+    }
 }

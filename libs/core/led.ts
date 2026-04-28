@@ -1,7 +1,7 @@
 /**
  * Control of the LED screen.
  */
-//% color=#16A085 weight=40 icon="\uf205" blockNamespace=smartteamDisplay
+//% color=#5C2D91 weight=40 icon="\uf205" blockNamespace=smartteamDisplay
 namespace led {
     /**
      * Get the on/off state of the specified LED using x, y coordinates. (0,0) is upper left.

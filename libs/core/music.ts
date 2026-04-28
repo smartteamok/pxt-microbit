@@ -172,7 +172,7 @@ enum MusicEvent {
 /**
  * Generation of music tones.
  */
-//% color=#D35400 weight=45 icon="\uf025" blockNamespace=smartteamOutputs
+//% color=#E63022 weight=45 icon="\uf025"
 //% groups='["Melody", "Tone", "Volume", "Tempo", "Melody Advanced"]'
 namespace music {
     const INTERNAL_MELODY_ENDED = 5;

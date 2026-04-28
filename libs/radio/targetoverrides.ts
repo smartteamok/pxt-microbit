@@ -1,5 +1,5 @@
 //% block="Comunicación"
-//% color=#2C7485
+//% color=#E3008C
 //% weight=55
 //% icon="\uf1eb"
 namespace radio {

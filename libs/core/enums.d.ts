@@ -543,6 +543,8 @@ declare namespace led {
     //% block="none"
     None = 0,  // MICROBIT_PIN_EVENT_NONE
     }
+declare namespace pins {
+}
 
 
     declare const enum SerialPin {

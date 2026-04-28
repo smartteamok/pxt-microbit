@@ -4,7 +4,7 @@
     /**
      * Creation, manipulation and display of LED images.
      */
-    //% color=#7600A8 weight=31 icon="\uf03e"
+    //% color=#7600A8 weight=31 icon="\uf03e" blockNamespace=smartteamDisplay
     //% advanced=true
 declare namespace images {
 
@@ -205,7 +205,7 @@ declare namespace basic {
 
 
 
-    //% color=#D400D4 weight=111 icon="\uf192"
+    //% color=#D400D4 weight=111 icon="\uf192" hidden=1
 declare namespace input {
 
     /**
@@ -527,7 +527,7 @@ declare namespace control {
 
 
 
-    //% color=#7600A8 weight=101 icon="\uf205"
+    //% color=#7600A8 weight=101 icon="\uf205" blockNamespace=smartteamDisplay
 declare namespace led {
 
     /**
@@ -697,6 +697,10 @@ declare namespace music {
     //% weight=1 level.defl=0 shim=music::setSilenceLevel
     function setSilenceLevel(level?: int32): void;
 }
+
+
+
+    //% color=#B22222 weight=49 icon="\uf140"
 declare namespace pins {
 
     /**

@@ -1,10 +1,15 @@
 {
   "smartteamCore.disableLedMatrix|block": "Deshabilitar matriz LED",
   "smartteamCore.enableLedMatrix|block": "Habilitar matriz LED",
+  "smartteamCore.ifThen|block": "Si %condition , entonces",
+  "smartteamCore.onButtonPressed|block": "Al presionar el boton %button",
+  "smartteamCore.onGesture|block": "Al %gesture",
+  "smartteamCore.onLogoPressed|block": "Al presionar el logo",
+  "smartteamCore.repeatTimes|block": "Repetir %times veces",
+  "smartteamCore.startStopwatch|block": "Iniciar cronometro",
+  "smartteamCore.stopwatch|block": "Cronometro",
   "smartteamCore.waitMs|block": "Esperar (ms) %ms",
   "smartteamCore|block": "Control",
   "{id:category}Loops": "Loops",
-  "{id:category}SmartteamCore": "SmartteamCore",
-  "{id:group}Configuracion": "Configuracion",
-  "{id:group}Tiempo": "Tiempo"
+  "{id:category}SmartteamCore": "SmartteamCore"
 }

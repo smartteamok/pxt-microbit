@@ -1,6 +1,13 @@
 {
-  "smartteamOutputs.playTone": "Reproduce un tono en el pin y frecuencia indicados.",
-  "smartteamOutputs.setLedBrightness": "Ajusta el brillo del LED con un valor entre 0 y 1023.",
-  "smartteamOutputs.stopBuzzer": "Apaga el zumbador activo.",
-  "smartteamOutputs.turnLedOn": "Enciende el LED conectado al pin seleccionado."
+  "smartteamOutputs.LedAction": "Accion para un LED externo.",
+  "smartteamOutputs.MelodyMode": "Modo de reproduccion para melodias.",
+  "smartteamOutputs.RgbLedSelection": "LED RGB a modificar en una tira de 6 LEDs.",
+  "smartteamOutputs.playNote": "Reproduce una nota en el zumbador integrado.",
+  "smartteamOutputs.playTone": "Reproduce un tono en el zumbador integrado.",
+  "smartteamOutputs.setLed": "Prende o apaga un LED externo conectado al pin seleccionado.",
+  "smartteamOutputs.setLedBrightness": "Ajusta el brillo de un LED externo con un valor entre 0 y 1023.",
+  "smartteamOutputs.setRgbLedsColor": "Prende los LEDs RGB externos con el color seleccionado.",
+  "smartteamOutputs.setRgbLedsRgb": "Ajusta el color RGB de uno o todos los LEDs del modulo externo.",
+  "smartteamOutputs.startMelody": "Comienza una melodia integrada.",
+  "smartteamOutputs.stopBuzzer": "Apaga el zumbador integrado."
 }

@@ -156,6 +156,7 @@ MicroBitPin *getPin(int id) {
 
 } // pxt
 
+//% color=#B22222 weight=49 icon="\uf140"
 namespace pins {
     #define PINOP(op) \
       MicroBitPin *pin = getPin((int)name); \

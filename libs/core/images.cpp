@@ -30,7 +30,7 @@ unsigned RefMImage::gcsize(RefMImage *t) {
 /**
  * Creation, manipulation and display of LED images.
  */
-//% color=#7600A8 weight=31 icon="\uf03e"
+//% color=#7600A8 weight=31 icon="\uf03e" blockNamespace=smartteamDisplay
 //% advanced=true
 namespace images {
 /**

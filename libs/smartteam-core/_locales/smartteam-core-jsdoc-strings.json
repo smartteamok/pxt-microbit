@@ -1,5 +1,12 @@
 {
   "smartteamCore.disableLedMatrix": "Desactiva la matriz LED para evitar interferencias con sensores en P10.",
   "smartteamCore.enableLedMatrix": "Vuelve a activar la matriz LED de la micro:bit.",
+  "smartteamCore.ifThen": "Ejecuta el codigo si se cumple la condicion.",
+  "smartteamCore.onButtonPressed": "Ejecuta el codigo cuando se presiona el boton seleccionado.",
+  "smartteamCore.onGesture": "Ejecuta el codigo cuando se detecta el gesto seleccionado.",
+  "smartteamCore.onLogoPressed": "Ejecuta el codigo cuando se presiona el logo de la micro:bit.",
+  "smartteamCore.repeatTimes": "Repite el codigo la cantidad de veces indicada.",
+  "smartteamCore.startStopwatch": "Reinicia el cronometro.",
+  "smartteamCore.stopwatch": "Devuelve los milisegundos transcurridos desde que se inicio el cronometro.",
   "smartteamCore.waitMs": "Espera la cantidad de milisegundos indicada."
 }

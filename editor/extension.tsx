@@ -22,26 +22,100 @@ pxt.editor.initExtensionsAsync = function (opts: pxt.editor.ExtensionOptions): P
             return ((al * bl) + (((ah * bl + al * bh) << 16) >>> 0) | 0);
         };
 
+    const smartTeamControlBlocks: pxt.editor.ToolboxBlockDefinition[] = [
+        {
+            name: "smartteam.control.while",
+            blockId: "device_while",
+            weight: 40,
+            blockXml: `<block type="device_while">
+    <value name="COND">
+        <block type="logic_compare">
+            <field name="OP">EQ</field>
+            <value name="A">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="B">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+    </value>
+</block>`
+        }
+    ];
+
+    const smartTeamLogicBlocks: pxt.editor.ToolboxBlockDefinition[] = [
+        {
+            name: "smartteam.logic.compare",
+            blockXml: `<block type="logic_compare">
+    <field name="OP">EQ</field>
+    <value name="A">
+        <shadow type="math_number">
+            <field name="NUM">0</field>
+        </shadow>
+    </value>
+    <value name="B">
+        <shadow type="math_number">
+            <field name="NUM">1</field>
+        </shadow>
+    </value>
+</block>`
+        },
+        {
+            name: "smartteam.logic.operation",
+            blockXml: `<block type="logic_operation">
+    <field name="OP">AND</field>
+</block>`
+        },
+        {
+            name: "smartteam.logic.negate",
+            blockXml: `<block type="logic_negate"></block>`
+        }
+    ];
+
     const res: pxt.editor.ExtensionResult = {
         hexFileImporters: [],
         toolboxOptions: {
             blocklyToolbox: {
-                functions: { name: "Funciones", weight: 110, color: "#3455DB" },
-                loops: { name: "Control", weight: 100, color: "#1E90FF" },
-                logic: { name: "Lógica", weight: 90, color: "#00A4A6" },
-                maths: { name: "Matemáticas", weight: 80, color: "#9400D3" },
-                variables: { name: "Variables", weight: 70, color: "#DC143C" },
-                text: { name: "Texto", weight: 60, color: "#B8860B" },
-                arrays: { name: "Variables", weight: 69, color: "#DC143C" }
+                functions: { name: "Funciones", weight: 110, color: "#7E57C2" },
+                loops: {
+                    name: "Control",
+                    weight: 100,
+                    color: "#FF9800",
+                    blocks: smartTeamControlBlocks
+                },
+                logic: {
+                    name: "Lógica",
+                    weight: 90,
+                    color: "#3BC64A",
+                    blocks: smartTeamLogicBlocks
+                },
+                maths: { name: "Matemáticas", weight: 80, color: "#13BFD3" },
+                variables: { name: "Variables", weight: 70, color: "#E91E63" },
+                text: { name: "Texto", weight: 60, color: "#009688" },
+                arrays: { name: "Variables", weight: 69, color: "#E91E63" }
             },
             monacoToolbox: {
-                functions: { name: "Funciones", weight: 110, color: "#3455DB" },
-                loops: { name: "Control", weight: 100, color: "#1E90FF" },
-                logic: { name: "Lógica", weight: 90, color: "#00A4A6" },
-                maths: { name: "Matemáticas", weight: 80, color: "#9400D3" },
-                variables: { name: "Variables", weight: 70, color: "#DC143C" },
-                text: { name: "Texto", weight: 60, color: "#B8860B" },
-                arrays: { name: "Variables", weight: 69, color: "#DC143C" }
+                functions: { name: "Funciones", weight: 110, color: "#7E57C2" },
+                loops: {
+                    name: "Control",
+                    weight: 100,
+                    color: "#FF9800",
+                    blocks: smartTeamControlBlocks
+                },
+                logic: {
+                    name: "Lógica",
+                    weight: 90,
+                    color: "#3BC64A",
+                    blocks: smartTeamLogicBlocks
+                },
+                maths: { name: "Matemáticas", weight: 80, color: "#13BFD3" },
+                variables: { name: "Variables", weight: 70, color: "#E91E63" },
+                text: { name: "Texto", weight: 60, color: "#009688" },
+                arrays: { name: "Variables", weight: 69, color: "#E91E63" }
             }
         }
     };

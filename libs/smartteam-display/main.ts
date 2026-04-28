@@ -1,6 +1,6 @@
 //% block="Pantallas"
 //% icon="\uf108"
-//% color="#16A085"
+//% color="#3F51B5"
 //% weight=40
 //% groups='["LCD","Tira RGB"]'
 namespace smartteamDisplay {

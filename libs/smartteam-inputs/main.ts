@@ -1,8 +1,3 @@
-//% block="Entradas"
-//% icon="\uf192"
-//% color="#2980B9"
-//% weight=50
-//% groups='["Linea","Distancia","Analogicas","Color","Joystick","Digitales","DHT11"]'
 namespace smartteamInputs {
     const LINE_THRESHOLD = 30
     const TCS34725_ADDR = 0x29
@@ -16,13 +11,6 @@ namespace smartteamInputs {
     const TCS34725_BDATAL = 0x1a
     let tcs34725Initialized = false
 
-    /**
-     * Detecta la posicion de una linea usando el sensor conectado a P10, P1 y P2.
-     */
-    //% blockId=smartteam_inputs_line_at block="Siguelineas %position en %port"
-    //% port.defl=smartteamShield.DigitalPort.Port1
-    //% group="Linea"
-    //% weight=90
     export function isLineAt(position: smartteamShield.LinePosition, port: smartteamShield.DigitalPort): boolean {
         const left = pins.analogReadPin(AnalogPin.P10)
         const center = pins.analogReadPin(AnalogPin.P1)
@@ -42,13 +30,6 @@ namespace smartteamInputs {
         }
     }
 
-    /**
-     * Lee distancia en centimetros con ultrasonido en P2 (trigger) y P1 (echo).
-     */
-    //% blockId=smartteam_inputs_distance_cm block="Distancia (cm) en %port"
-    //% port.defl=smartteamShield.DigitalPort.Port1
-    //% group="Distancia"
-    //% weight=80
     export function readDistanceCm(port: smartteamShield.DigitalPort): number {
         pins.digitalWritePin(DigitalPin.P2, 0)
         control.waitMicros(2)
@@ -61,46 +42,18 @@ namespace smartteamInputs {
         return Math.floor(duration / 58)
     }
 
-    /**
-     * Lee humedad de suelo en el puerto analogico seleccionado.
-     */
-    //% blockId=smartteam_inputs_soil_moisture block="Humedad de suelo en %port"
-    //% port.defl=smartteamShield.AnalogPort.Port0
-    //% group="Analogicas"
-    //% weight=70
     export function readSoilMoisture(port: smartteamShield.AnalogPort): number {
         return pins.analogReadPin(smartteamShield.analogPin(port))
     }
 
-    /**
-     * Lee intensidad luminosa en el puerto analogico seleccionado.
-     */
-    //% blockId=smartteam_inputs_light_level block="Intensidad luminosa en %port"
-    //% port.defl=smartteamShield.AnalogPort.Port0
-    //% group="Analogicas"
-    //% weight=68
     export function readLightLevel(port: smartteamShield.AnalogPort): number {
         return pins.analogReadPin(smartteamShield.analogPin(port))
     }
 
-    /**
-     * Lee la posicion de un potenciometro.
-     */
-    //% blockId=smartteam_inputs_potentiometer block="Posicion potenciometro en %port"
-    //% port.defl=smartteamShield.AnalogPort.Port0
-    //% group="Analogicas"
-    //% weight=66
     export function readPotentiometer(port: smartteamShield.AnalogPort): number {
         return pins.analogReadPin(smartteamShield.analogPin(port))
     }
 
-    /**
-     * Lee el nivel R, G o B del sensor de color TCS34725.
-     */
-    //% blockId=smartteam_inputs_color_level block="Nivel de %channel en sensor de color"
-    //% channel.defl=smartteamShield.ColorChannel.Red
-    //% group="Color"
-    //% weight=65
     export function readColorLevel(channel: smartteamShield.ColorChannel): number {
         const rgb = tcs34725ReadRgb()
         switch (channel) {
@@ -115,13 +68,6 @@ namespace smartteamInputs {
         }
     }
 
-    /**
-     * Detecta si el color dominante coincide con la seleccion.
-     */
-    //% blockId=smartteam_inputs_color_detected block="Color detectado es %color"
-    //% color.defl=smartteamShield.DetectedColor.Red
-    //% group="Color"
-    //% weight=63
     export function isColorDetected(color: smartteamShield.DetectedColor): boolean {
         const rgb = tcs34725ReadRgb()
         const red = tcs34725ToAnalog(rgb[0])
@@ -141,14 +87,6 @@ namespace smartteamInputs {
         }
     }
 
-    /**
-     * Lee el joystick conectado a P1, P2 y P10.
-     */
-    //% blockId=smartteam_inputs_joystick block="Joystick %axis en %port"
-    //% axis.defl=smartteamShield.JoystickAxis.X
-    //% port.defl=smartteamShield.JoystickPort.Port1
-    //% group="Joystick"
-    //% weight=64
     export function readJoystick(axis: smartteamShield.JoystickAxis, port: smartteamShield.JoystickPort): number {
         switch (axis) {
             case smartteamShield.JoystickAxis.X:
@@ -163,48 +101,20 @@ namespace smartteamInputs {
         }
     }
 
-    /**
-     * Lee el estado de un boton tactil digital.
-     */
-    //% blockId=smartteam_inputs_touch_button block="Tactil en %port"
-    //% port.defl=smartteamShield.DigitalPort.Port0
-    //% group="Digitales"
-    //% weight=60
     export function readTouchButton(port: smartteamShield.DigitalPort): boolean {
         return pins.digitalReadPin(smartteamShield.digitalPin(port)) === 1
     }
 
-    /**
-     * Lee el estado de un pulsador digital activo en bajo.
-     */
-    //% blockId=smartteam_inputs_push_button block="Pulsador en %port"
-    //% port.defl=smartteamShield.DigitalPort.Port0
-    //% group="Digitales"
-    //% weight=59
     export function readPushButton(port: smartteamShield.DigitalPort): boolean {
         return pins.digitalReadPin(smartteamShield.digitalPin(port)) === 0
     }
 
-    /**
-     * Lee temperatura en grados Celsius de un DHT11.
-     */
-    //% blockId=smartteam_inputs_dht11_temperature block="Temperatura DHT11 (C) en %port"
-    //% port.defl=smartteamShield.DigitalPort.Port0
-    //% group="DHT11"
-    //% weight=58
     export function readDht11Temperature(port: smartteamShield.DigitalPort): number {
         const data = dht11Read(smartteamShield.digitalPin(port))
         if (data.length < 5) return -1
         return data[2]
     }
 
-    /**
-     * Lee humedad porcentual de un DHT11.
-     */
-    //% blockId=smartteam_inputs_dht11_humidity block="Humedad DHT11 en %port"
-    //% port.defl=smartteamShield.DigitalPort.Port0
-    //% group="DHT11"
-    //% weight=56
     export function readDht11Humidity(port: smartteamShield.DigitalPort): number {
         const data = dht11Read(smartteamShield.digitalPin(port))
         if (data.length < 5) return -1
@@ -299,5 +209,227 @@ namespace smartteamInputs {
     function assertUnreachableJoystickAxis(value: never): never {
         control.fail("Eje de joystick SmartTEAM no soportado: " + value)
         return value
+    }
+}
+
+//% block="Entradas (D)"
+//% icon="\uf192"
+//% color="#9C27B0"
+//% weight=50
+//% groups='["Microbit","Externos"]'
+namespace smartteamDigitalInputs {
+    /**
+     * Indica si el boton A, B o A+B de la micro:bit esta presionado.
+     */
+    //% blockId=smartteam_digital_button_pressed block="| Boton %button esta presionado"
+    //% group="Microbit"
+    //% weight=100
+    export function buttonIsPressed(button: Button): boolean {
+        return input.buttonIsPressed(button)
+    }
+
+    /**
+     * Indica si el logo de la micro:bit esta presionado.
+     */
+    //% blockId=smartteam_digital_logo_pressed block="| LOGO esta presionado"
+    //% group="Microbit"
+    //% weight=90
+    //% parts="logotouch"
+    export function logoIsPressed(): boolean {
+        return input.logoIsPressed()
+    }
+
+    /**
+     * Lee un boton externo conectado al puerto digital seleccionado.
+     */
+    //% blockId=smartteam_digital_push_button block="| BOTON en el pin %port"
+    //% port.defl=smartteamShield.DigitalPort.Port0
+    //% group="Externos"
+    //% weight=80
+    export function readPushButton(port: smartteamShield.DigitalPort): boolean {
+        return smartteamInputs.readPushButton(port)
+    }
+
+    /**
+     * Lee un sensor tactil externo conectado al puerto digital seleccionado.
+     */
+    //% blockId=smartteam_digital_touch_button block="| TACTIL en el pin %port"
+    //% port.defl=smartteamShield.DigitalPort.Port0
+    //% group="Externos"
+    //% weight=70
+    export function readTouchButton(port: smartteamShield.DigitalPort): boolean {
+        return smartteamInputs.readTouchButton(port)
+    }
+
+    /**
+     * Lee la temperatura desde un DHT11 externo.
+     */
+    //% blockId=smartteam_digital_temperature block="| TEMPERATURA en el pin %port"
+    //% port.defl=smartteamShield.DigitalPort.Port0
+    //% group="Externos"
+    //% weight=60
+    export function readTemperature(port: smartteamShield.DigitalPort): number {
+        return smartteamInputs.readDht11Temperature(port)
+    }
+
+    /**
+     * Lee distancia en centimetros con ultrasonido.
+     */
+    //% blockId=smartteam_digital_ultrasonic block="| ULTRASONIDO en el pin %port"
+    //% port.defl=smartteamShield.DigitalPort.Port1
+    //% group="Externos"
+    //% weight=50
+    export function readUltrasonic(port: smartteamShield.DigitalPort): number {
+        return smartteamInputs.readDistanceCm(port)
+    }
+
+    /**
+     * Lee un sensor de obstaculo digital.
+     */
+    //% blockId=smartteam_digital_obstacle block="| OBSTACULO en el pin %port"
+    //% port.defl=smartteamShield.DigitalPort.Port0
+    //% group="Externos"
+    //% weight=40
+    export function readObstacle(port: smartteamShield.DigitalPort): boolean {
+        return pins.digitalReadPin(smartteamShield.digitalPin(port)) === 0
+    }
+
+    /**
+     * Lee el nivel del canal seleccionado del sensor de color IIC.
+     */
+    //% blockId=smartteam_digital_color_level block="| COLOR %channel en el pin IIC"
+    //% channel.defl=smartteamShield.ColorChannel.Red
+    //% group="Externos"
+    //% weight=30
+    export function readColorLevel(channel: smartteamShield.ColorChannel): number {
+        return smartteamInputs.readColorLevel(channel)
+    }
+
+    /**
+     * Indica si el color dominante del sensor IIC coincide con el color seleccionado.
+     */
+    //% blockId=smartteam_digital_color_detected block="| COLOR en el pin IIC es %color"
+    //% color.defl=smartteamShield.DetectedColor.Red
+    //% group="Externos"
+    //% weight=20
+    export function isColorDetected(color: smartteamShield.DetectedColor): boolean {
+        return smartteamInputs.isColorDetected(color)
+    }
+
+    /**
+     * Detecta la posicion de una linea usando el sensor seguidor de lineas.
+     */
+    //% blockId=smartteam_digital_line_at block="| Seguidor de lineas en el pin %port %position"
+    //% port.defl=smartteamShield.DigitalPort.Port1
+    //% position.defl=smartteamShield.LinePosition.Right
+    //% group="Externos"
+    //% weight=10
+    export function isLineAt(port: smartteamShield.DigitalPort, position: smartteamShield.LinePosition): boolean {
+        return smartteamInputs.isLineAt(position, port)
+    }
+}
+
+//% block="Entradas (A~)"
+//% icon="\uf192"
+//% color="#9C27B0"
+//% weight=49
+//% groups='["Microbit","Externos"]'
+namespace smartteamAnalogInputs {
+    /**
+     * Lee el nivel de luz del sensor integrado de la micro:bit.
+     */
+    //% blockId=smartteam_analog_microbit_light block="| NIVEL DE LUZ en el sensor de microbit"
+    //% group="Microbit"
+    //% weight=100
+    export function microbitLightLevel(): number {
+        return input.lightLevel()
+    }
+
+    /**
+     * Lee la temperatura del sensor integrado de la micro:bit.
+     */
+    //% blockId=smartteam_analog_microbit_temperature block="| Temperatura en el sensor de microbit"
+    //% group="Microbit"
+    //% weight=90
+    export function microbitTemperature(): number {
+        return input.temperature()
+    }
+
+    /**
+     * Lee la aceleracion de la micro:bit en el eje seleccionado.
+     */
+    //% blockId=smartteam_analog_acceleration block="| Aceleracion en el eje %dimension"
+    //% dimension.defl=Dimension.X
+    //% group="Microbit"
+    //% weight=80
+    export function acceleration(dimension: Dimension): number {
+        return input.acceleration(dimension)
+    }
+
+    /**
+     * Lee la fuerza magnetica de la micro:bit en el eje seleccionado.
+     */
+    //% blockId=smartteam_analog_magnetic_force block="| Fuerza magnetica en el eje %dimension"
+    //% dimension.defl=Dimension.X
+    //% group="Microbit"
+    //% weight=70
+    export function magneticForce(dimension: Dimension): number {
+        return input.magneticForce(dimension)
+    }
+
+    /**
+     * Lee el nivel de sonido del sensor integrado de la micro:bit.
+     */
+    //% blockId=smartteam_analog_sound_level block="| Nivel de sonido en el sensor microbit"
+    //% group="Microbit"
+    //% weight=60
+    //% parts="microphone"
+    export function soundLevel(): number {
+        return input.soundLevel()
+    }
+
+    /**
+     * Lee un sensor de luz externo.
+     */
+    //% blockId=smartteam_analog_light block="| LUZ en el pin %port"
+    //% port.defl=smartteamShield.AnalogPort.Port0
+    //% group="Externos"
+    //% weight=50
+    export function readLightLevel(port: smartteamShield.AnalogPort): number {
+        return smartteamInputs.readLightLevel(port)
+    }
+
+    /**
+     * Lee un sensor de humedad de suelo externo.
+     */
+    //% blockId=smartteam_analog_soil block="| SUELO en el pin %port"
+    //% port.defl=smartteamShield.AnalogPort.Port0
+    //% group="Externos"
+    //% weight=40
+    export function readSoilMoisture(port: smartteamShield.AnalogPort): number {
+        return smartteamInputs.readSoilMoisture(port)
+    }
+
+    /**
+     * Lee un potenciometro externo.
+     */
+    //% blockId=smartteam_analog_potentiometer block="| POTENCIOMETRO en el pin %port"
+    //% port.defl=smartteamShield.AnalogPort.Port0
+    //% group="Externos"
+    //% weight=30
+    export function readPotentiometer(port: smartteamShield.AnalogPort): number {
+        return smartteamInputs.readPotentiometer(port)
+    }
+
+    /**
+     * Lee el eje seleccionado del joystick externo.
+     */
+    //% blockId=smartteam_analog_joystick block="| Eje %axis del JOYSTICK en el pin %port"
+    //% axis.defl=smartteamShield.JoystickAxis.X
+    //% port.defl=smartteamShield.JoystickPort.Port1
+    //% group="Externos"
+    //% weight=20
+    export function readJoystick(axis: smartteamShield.JoystickAxis, port: smartteamShield.JoystickPort): number {
+        return smartteamInputs.readJoystick(axis, port)
     }
 }

@@ -7,6 +7,7 @@ namespace loops {
      * @param body code to execute
      */
     //% weight=45 blockAllowMultiple=1
+    //% blockHidden=true
     //% interval.shadow=longTimePicker
     //% afterOnStart=true help=loops/every-interval
     //% blockId=every_interval block="every $interval ms"
