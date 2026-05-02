@@ -1,0 +1,8 @@
+{
+  "smartteamMotors.SmartTeamMotorDirection.Left|block": "izquierda",
+  "smartteamMotors.SmartTeamMotorDirection.Right|block": "derecha",
+  "smartteamMotors.turnDcMotor|block": "Girar a la $direction el MOTOR DC en el pin $pin",
+  "smartteamMotors|block": "Motores",
+  "{id:category}SmartteamMotors": "SmartteamMotors",
+  "{id:group}Motor DC": "Motor DC"
+}

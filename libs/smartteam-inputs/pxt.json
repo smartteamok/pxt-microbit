@@ -1,0 +1,13 @@
+{
+    "name": "smartteam-inputs",
+    "description": "SmartTeam digital and analog input blocks.",
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "microphone": "file:../microphone"
+    }
+}

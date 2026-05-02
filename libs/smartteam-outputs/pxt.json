@@ -1,0 +1,13 @@
+{
+    "name": "smartteam-outputs",
+    "description": "SmartTeam output blocks for LEDs, buzzer, tones, melodies, and RGB modules.",
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "microphone": "file:../microphone"
+    }
+}

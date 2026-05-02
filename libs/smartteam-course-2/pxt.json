@@ -1,0 +1,49 @@
+{
+    "name": "smartteam-course-2",
+    "description": "SmartTeam course profile for 2nd grade.",
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "radio": "file:../radio",
+        "microphone": "file:../microphone",
+        "smartteam-core": "file:../smartteam-core",
+        "smartteam-outputs": "file:../smartteam-outputs",
+        "smartteam-motors": "file:../smartteam-motors"
+    },
+    "toolboxFilter": {
+        "namespaces": {
+            "basic": "hidden",
+            "input": "hidden",
+            "music": "hidden",
+            "led": "hidden",
+            "light": "hidden",
+            "pins": "hidden",
+            "serial": "hidden",
+            "radio": "hidden",
+            "control": "hidden",
+            "game": "hidden",
+            "images": "hidden",
+            "arrays": "hidden",
+            "logic": "hidden",
+            "Math": "hidden",
+            "text": "hidden",
+            "variables": "hidden",
+            "functions": "hidden"
+        },
+        "blocks": {
+            "smartteam_control_if_then": "hidden",
+            "smartteam_control_on_logo_pressed": "hidden",
+            "smartteam_control_while": "hidden",
+            "smartteam_control_start_stopwatch": "hidden",
+            "smartteam_control_stopwatch": "hidden",
+            "smartteam_motors_robot_move": "hidden",
+            "smartteam_motors_robot_move_speed": "hidden",
+            "smartteam_motors_robot_motor_turn": "hidden",
+            "smartteam_motors_robot_motor_turn_speed": "hidden"
+        }
+    }
+}

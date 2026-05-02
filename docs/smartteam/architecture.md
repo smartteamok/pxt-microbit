@@ -37,13 +37,15 @@ This is a good clean baseline for building the target deliberately. The older Sm
 
 Use one micro:bit-based target and multiple SmartTeam packages.
 
+The toolbox category contract is documented in [Category Taxonomy](category-taxonomy.md). Package boundaries below should follow that taxonomy.
+
 Core packages:
 
 - `smartteam-core`: control wrappers and basic helpers.
 - `smartteam-shield`: shared enums, pin mapping, clamp/utilities.
-- `smartteam-inputs`: digital and analog inputs.
 - `smartteam-outputs`: LEDs, buzzer, RGB outputs.
 - `smartteam-motors`: DC motor, robot movement, servo, fan.
+- `smartteam-inputs`: digital and analog inputs, split into `smartteamDigitalInputs` and `smartteamAnalogInputs` namespaces.
 - `smartteam-display`: LCD, RGB strip, later matrix 8x8.
 - `smartteam-communication`: Bluetooth/radio abstractions for grade 6, pending definition.
 
@@ -104,12 +106,13 @@ The new project flow should ask for grade before creating the project.
 Expected user flow:
 
 1. User clicks New Project.
-2. User selects `1er grado`, `2do grado`, ..., `6to grado`.
-3. MakeCode creates a project using the matching course template/dependencies.
-4. The toolbox is filtered by the selected course package.
-5. The grade is not changed later inside that project.
+2. MakeCode shows its standard new-project dialog.
+3. User selects `1er grado`, `2do grado`, ..., `6to grado` in the required SmartTeam course modal.
+4. MakeCode creates a project using the matching course dependency.
+5. The toolbox is filtered by the selected course package.
+6. The grade is not changed later inside that project.
 
-Implementation detail to verify in PXT core: the cleanest path is probably project cards/templates whose package dependencies include exactly one `smartteam-course-*` package. If standard gallery/template behavior is insufficient for a mandatory grade choice, then `editor/extension.tsx` or target-specific editor extension code can customize the new-project flow.
+Current implementation detail: `editor/extension.tsx` wraps `askForProjectCreationOptionsAsync`, opens the SmartTeam course modal, and adds exactly one `smartteam-course-*` dependency to the project creation options.
 
 ## Localization
 

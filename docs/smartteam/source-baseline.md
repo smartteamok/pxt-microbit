@@ -20,21 +20,36 @@ Remote:
 
 ## Current Local Changes
 
-Only SmartTeam planning documentation has been added:
+SmartTeam planning documentation has been added:
 
 - `docs/smartteam/`
 
-No target code has been changed yet.
+Initial package skeletons have also been added:
+
+- `libs/smartteam-core`
+- `libs/smartteam-outputs`
+- `libs/smartteam-motors`
+- `libs/smartteam-inputs`
+- `libs/smartteam-course-1`
+- `libs/smartteam-course-2`
+- `libs/smartteam-course-3`
+- `libs/smartteam-course-4`
+- `libs/smartteam-course-5`
+- `libs/smartteam-course-6`
+
+Target code changes are now tracked in:
+
+- `pxtarget.json`
+- `editor/extension.tsx`
 
 ## Baseline Findings
 
-The current public `master` branch is a clean micro:bit base:
+The public `master` branch originally cloned into this workspace was a clean micro:bit base:
 
 - `pxtarget.json` still identifies the target as `microbit`.
 - `editor/extension.tsx` contains only the standard micro:bit extension initialization.
 - `libs/blocksprj/pxt.json` depends on `core`, `radio`, and `microphone`.
 - `libs/tsprj/pxt.json` depends on `core`, `radio`, and `microphone`.
-- No `libs/smartteam-*` packages are present.
 
 This means the SmartTeam work should be treated as a controlled port into a clean base.
 

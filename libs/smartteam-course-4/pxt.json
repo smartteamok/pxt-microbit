@@ -1,0 +1,48 @@
+{
+    "name": "smartteam-course-4",
+    "description": "SmartTeam course profile for 4th grade.",
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "radio": "file:../radio",
+        "microphone": "file:../microphone",
+        "smartteam-core": "file:../smartteam-core",
+        "smartteam-outputs": "file:../smartteam-outputs",
+        "smartteam-motors": "file:../smartteam-motors",
+        "smartteam-inputs": "file:../smartteam-inputs"
+    },
+    "toolboxFilter": {
+        "namespaces": {
+            "basic": "hidden",
+            "input": "hidden",
+            "music": "hidden",
+            "led": "hidden",
+            "light": "hidden",
+            "pins": "hidden",
+            "serial": "hidden",
+            "radio": "hidden",
+            "control": "hidden",
+            "game": "hidden",
+            "images": "hidden",
+            "arrays": "hidden",
+            "variables": "hidden",
+            "functions": "hidden"
+        },
+        "blocks": {
+            "smartteam_inputs_temperature_pin": "hidden",
+            "smartteam_inputs_ultrasonic_pin": "hidden",
+            "smartteam_inputs_line_follower": "hidden",
+            "smartteam_inputs_light_pin": "hidden",
+            "smartteam_inputs_soil_pin": "hidden",
+            "smartteam_inputs_potentiometer_pin": "hidden",
+            "smartteam_inputs_joystick_axis": "hidden",
+            "smartteam_motors_robot_move_speed": "hidden",
+            "smartteam_motors_robot_motor_turn": "hidden",
+            "smartteam_motors_robot_motor_turn_speed": "hidden"
+        }
+    }
+}

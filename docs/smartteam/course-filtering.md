@@ -37,6 +37,7 @@ Example package:
         "smartteam-inputs": "file:../smartteam-inputs"
     },
     "files": [
+        "main.ts",
         "README.md"
     ],
     "public": true,
@@ -61,6 +62,7 @@ Exact filter shape must be verified in the target after the first prototype beca
 
 ## Filtering Rules
 
+- Use [Category Taxonomy](category-taxonomy.md) as the source of truth for category ownership and default native category policy.
 - Prefer hiding at namespace level when a whole native category is not wanted.
 - Prefer hiding at block level when a category stays visible but only some blocks are allowed.
 - Prefer SmartTeam wrapper blocks when the native block label or parameter model is too advanced.
@@ -69,9 +71,25 @@ Exact filter shape must be verified in the target after the first prototype beca
 
 ## Selection Strategy
 
-Each grade should be created from a template/card that installs exactly one course profile package.
+Each new project must be created through the normal MakeCode "New Project" flow and then select exactly one course profile in the SmartTeam course modal.
 
 The selected course package becomes part of the project's `pxt.json`, making the grade persistent and project-local.
+
+Current implementation:
+
+- Course profile packages live in `libs/smartteam-course-1` through `libs/smartteam-course-6`.
+- `editor/extension.tsx` wraps `askForProjectCreationOptionsAsync` and opens a required course selector before project creation completes.
+- The selected course is saved by adding `smartteam-course-N` to the new project's dependencies.
+- `editor/extension.tsx` keeps the selected course while MakeCode finishes its own project creation flow, then injects the course dependency, root `toolboxFilter`, and `ProjectCreationOptions.filters` before `createProjectAsync` installs the project.
+- `editor/extension.tsx` forces a toolbox refresh after project creation so the selected course is visible immediately.
+- The root project `pxt.json` and the selected `smartteam-course-N` package both carry the same filter intent, so reopening the project can reload the grade filter from project state and package metadata.
+- Course packages include a minimal `main.ts`; this keeps each profile as a real dependency in PXT's package graph so dependency-level `toolboxFilter` metadata is available.
+- Lower-grade packages hide known future SmartTeam block IDs in `toolboxFilter.blocks` so later package additions do not leak into earlier courses.
+- The default `blocksprj` and `tsprj` templates remain generic; they should not force a fixed course profile.
+
+Important implementation detail: Blockly's built-in Mathematics namespace is `Math`, not `math`. Course filters must use the capitalized key.
+
+Do not manually edit `docs/projects.md` as the source of truth. `pxt buildtarget` regenerates it from `targetconfig.galleries`.
 
 ## No In-Project Course Switching
 
@@ -83,4 +101,3 @@ This simplifies:
 - dependency conflicts
 - project migration rules
 - classroom support
-

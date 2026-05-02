@@ -1,0 +1,11 @@
+{
+  "smartteamCore.SmartTeamButton.A|block": "A",
+  "smartteamCore.SmartTeamButton.B|block": "B",
+  "smartteamCore.SmartTeamGesture.Shake|block": "agitar",
+  "smartteamCore.onButtonPressed|block": "Al presionar el boton $button",
+  "smartteamCore.onGesture|block": "Al $gesture",
+  "smartteamCore.waitMs|block": "Esperar (ms) $ms",
+  "smartteamCore|block": "Control",
+  "{id:category}Loops": "Loops",
+  "{id:category}SmartteamCore": "SmartteamCore"
+}

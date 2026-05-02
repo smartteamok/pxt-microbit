@@ -1,0 +1,13 @@
+{
+    "name": "smartteam-core",
+    "description": "SmartTeam control wrappers and core helpers.",
+    "dependencies": {
+        "core": "file:../core",
+        "microphone": "file:../microphone"
+    },
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "public": true
+}

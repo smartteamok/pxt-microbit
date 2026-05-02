@@ -1,0 +1,33 @@
+{
+    "name": "smartteam-course-6",
+    "description": "SmartTeam course profile for 6th grade.",
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "radio": "file:../radio",
+        "microphone": "file:../microphone",
+        "smartteam-core": "file:../smartteam-core",
+        "smartteam-outputs": "file:../smartteam-outputs",
+        "smartteam-motors": "file:../smartteam-motors",
+        "smartteam-inputs": "file:../smartteam-inputs"
+    },
+    "toolboxFilter": {
+        "namespaces": {
+            "basic": "hidden",
+            "input": "hidden",
+            "music": "hidden",
+            "led": "hidden",
+            "light": "hidden",
+            "pins": "hidden",
+            "control": "hidden",
+            "game": "hidden",
+            "images": "hidden",
+            "arrays": "hidden"
+        },
+        "blocks": {}
+    }
+}

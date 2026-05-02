@@ -20,7 +20,17 @@
         "libs/bitmap",
         "libs/fonts",
         "libs/color",
-        "libs/audio-recording"
+        "libs/audio-recording",
+        "libs/smartteam-core",
+        "libs/smartteam-outputs",
+        "libs/smartteam-motors",
+        "libs/smartteam-inputs",
+        "libs/smartteam-course-1",
+        "libs/smartteam-course-2",
+        "libs/smartteam-course-3",
+        "libs/smartteam-course-4",
+        "libs/smartteam-course-5",
+        "libs/smartteam-course-6"
     ],
     "cloud": {
         "workspace": false,
@@ -483,13 +493,13 @@
             }
         },
         "blockColors": {
-            "logic": "#00A4A6",
-            "loops": "#00AA00",
+            "logic": "#3BC64A",
+            "loops": "#FF9800",
             "math": "#9400D3",
             "variables": "#DC143C",
             "text": "#B8860B",
             "advanced": "#00272B",
-            "functions": "#3455DB",
+            "functions": "#7E57C2",
             "arrays": "#E65722"
         },
         "defaultColorTheme": "microbit-light",

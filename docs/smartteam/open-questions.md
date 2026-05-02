@@ -88,6 +88,12 @@ Confirm whether student-facing speed should be:
 - `0-100`, easier pedagogically, or
 - `0-1023`, closer to PWM.
 
+## Digital Sensor Polarity
+
+Initial `smartteam_inputs_button_pin` and `smartteam_inputs_obstacle_pin` wrappers treat digital value `1` as active/true.
+
+Confirm whether each external sensor in the SmartTeam kit is active-high or active-low before expanding the input package.
+
 ## Communication Protocol
 
 Grade 6 Bluetooth communication blocks are pending definition.

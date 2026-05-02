@@ -1,0 +1,13 @@
+{
+    "name": "smartteam-motors",
+    "description": "SmartTeam motor and robot movement blocks.",
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "microphone": "file:../microphone"
+    }
+}

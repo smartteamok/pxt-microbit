@@ -79,11 +79,11 @@ Still to confirm after dependency install/build:
 
 Normalize package boundaries:
 
-- `smartteam-core`
+- `smartteam-core` - skeleton created
 - `smartteam-shield`
-- `smartteam-inputs`
-- `smartteam-outputs`
-- `smartteam-motors`
+- `smartteam-inputs` - skeleton and first digital/analog input blocks created
+- `smartteam-outputs` - skeleton created
+- `smartteam-motors` - skeleton created
 - `smartteam-display`
 - `smartteam-communication`
 
@@ -91,9 +91,11 @@ Normalize block IDs so they match the matrix or update the matrix if an existing
 
 Important: once released, block IDs should not change because blocks are serialized by ID in projects.
 
+Before implementing these packages, keep [Category Taxonomy](category-taxonomy.md) synchronized with namespace ownership, category labels, colors, groups, and native category policy.
+
 ## Phase 4: Course Packages
 
-Create:
+Created:
 
 - `libs/smartteam-course-1`
 - `libs/smartteam-course-2`
@@ -112,7 +114,7 @@ Each course package should:
 
 Replace or simplify default micro:bit home/tutorial flow.
 
-Add grade creation entries:
+Add required grade selection to the standard project creation flow:
 
 - `1er grado`
 - `2do grado`
@@ -123,11 +125,23 @@ Add grade creation entries:
 
 Grade labels must be localizable.
 
-Each entry creates a project with the corresponding course package installed.
+Each selection creates a project with the corresponding course package installed.
+
+Implemented course selection:
+
+- The stock "New Project" button remains visible.
+- `editor/extension.tsx` wraps `askForProjectCreationOptionsAsync`.
+- After the stock project creation dialog returns, a required SmartTeam course selector appears.
+- The selected grade is persisted as a `smartteam-course-N` dependency in the project `pxt.json`.
+- The selected grade filter is also persisted as the root project `toolboxFilter`, because dependency-level `toolboxFilter` is not sufficient to filter the active project toolbox.
+- `libs/blocksprj/pxt.json` and `libs/tsprj/pxt.json` no longer force a fixed course profile.
+
+This keeps the MakeCode project creation flow intact while preventing new projects without an explicit course profile.
 
 Known files/areas to audit for cleanup:
 
 - `pxtarget.json`: `homeScreenHero`, `homeScreenHeroGallery`, `docMenu`, `appTheme` gallery-related settings.
+- `targetconfig.json`: `galleries`
 - `docs/projects.md`
 - `docs/tutorials.md`
 - `docs/tutorials-v2.md`
@@ -151,6 +165,27 @@ Do this package by package:
 5. Inputs.
 6. Display.
 7. Communication.
+
+Initial implemented grade-1 blocks:
+
+- `smartteam_core_wait_ms`
+- `smartteam_control_on_button_pressed`
+- `smartteam_control_on_gesture`
+- `smartteam_outputs_set_led`
+- `smartteam_outputs_set_led_brightness`
+- `smartteam_outputs_play_note`
+- `smartteam_outputs_play_tone`
+- `smartteam_outputs_start_melody`
+- `smartteam_outputs_stop_buzzer`
+- `smartteam_motors_turn_dc_motor`
+
+Initial implemented grade-3 input blocks:
+
+- `smartteam_inputs_microbit_button_pressed`
+- `smartteam_inputs_logo_is_pressed`
+- `smartteam_inputs_button_pin`
+- `smartteam_inputs_obstacle_pin`
+- `smartteam_inputs_microbit_light_level`
 
 ## Phase 7: Verification
 

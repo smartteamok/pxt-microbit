@@ -1,0 +1,12 @@
+{
+  "smartteamAnalogInputs": "SmartTeam analog input blocks.",
+  "smartteamAnalogInputs.microbitLightLevel": "Read the micro:bit light level.",
+  "smartteamDigitalInputs": "SmartTeam digital input blocks.",
+  "smartteamDigitalInputs.buttonPin": "Read an external push button connected to a digital pin.",
+  "smartteamDigitalInputs.buttonPin|param|pin": "input pin",
+  "smartteamDigitalInputs.logoIsPressed": "Check whether the micro:bit logo is pressed.",
+  "smartteamDigitalInputs.microbitButtonPressed": "Check whether a micro:bit button is pressed.",
+  "smartteamDigitalInputs.microbitButtonPressed|param|button": "button to read",
+  "smartteamDigitalInputs.obstaclePin": "Read an external obstacle sensor connected to a digital pin.",
+  "smartteamDigitalInputs.obstaclePin|param|pin": "input pin"
+}

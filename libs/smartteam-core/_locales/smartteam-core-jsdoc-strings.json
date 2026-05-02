@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "SmartTeam control wrappers and core helpers.",
+  "smartteamCore.onButtonPressed": "Run code when a micro:bit button is pressed.",
+  "smartteamCore.onButtonPressed|param|button": "button to handle",
+  "smartteamCore.onGesture": "Run code when a micro:bit gesture is detected.",
+  "smartteamCore.onGesture|param|gesture": "gesture to handle",
+  "smartteamCore.waitMs": "Wait for a number of milliseconds.",
+  "smartteamCore.waitMs|param|ms": "time to wait in milliseconds"
+}
