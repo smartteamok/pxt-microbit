@@ -1,6 +1,6 @@
 # Initial Block Matrix
 
-This document captures the first pass of block availability by grade.
+This document captures the first pass of block availability by grade. It is a **planning / curriculum worksheet**: rows can drift from `libs/smartteam-*/main.ts` (`blockId`, naming). For what is actually implemented and exposed per grade, use the course `pxt.json` files and the sources under `libs/smartteam-*`.
 
 Assumption: rows marked `4,5,2006` in the source notes mean `4,5,6`.
 

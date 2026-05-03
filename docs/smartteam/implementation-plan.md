@@ -2,28 +2,23 @@
 
 ## Phase 0: Repo Baseline
 
-Current requested workspace:
+Workspace:
 
 - `/Users/marianobat/dev/makecode-st2`
 
-Current state:
+Origin:
 
-- Source cloned from `https://github.com/smartteamok/pxt-microbit.git`.
-- Branch created: `smartteam/course-target-plan`.
-- Remote: `origin` points to `smartteamok/pxt-microbit`.
-- Planning docs live under `docs/smartteam`.
+- Fork line based on `https://github.com/smartteamok/pxt-microbit.git` (e.g. branch `smartteam/course-target-plan`).
+- Planning docs under `docs/smartteam`.
 
-Baseline observation:
+**Original** import observation (historical): upstream `master` had no `libs/smartteam-*` and a stock `editor/extension.tsx`.
 
-- The cloned `master` branch does not yet contain `libs/smartteam-*`.
-- `editor/extension.tsx` is stock/near-stock micro:bit extension initialization.
-- Default templates only depend on `core`, `radio`, and `microphone`.
+**Current** observation: this repo already contains `smartteam-core`, `smartteam-outputs`, `smartteam-motors`, `smartteam-inputs`, course packages `smartteam-course-1` … `6`, bundled in `pxtarget.json`, with SmartTeam project creation and `toolboxFilter` loading in `editor/extension.tsx`. Default `blocksprj` / `tsprj` stay generic.
 
-Decision:
+Ongoing decision:
 
-- Use this fork as the clean base.
-- Port SmartTeam packages and toolbox customization deliberately from the older local pilot and the FIFA extension.
-- Do not fork or modify `microsoft/pxt` unless target-level mechanisms prove insufficient.
+- Port remaining design (display, communication, shield helpers, etc.) and curriculum details from the older pilot and `smartteamok/exp-microbit-fifa-v1` using the same target mechanisms.
+- Avoid forking `microsoft/pxt` unless a mechanism is truly missing.
 
 ## Phase 1: Documentation Baseline
 

@@ -17,48 +17,31 @@ The target should keep the standard micro:bit flow, but with a cleaner home expe
 - `smartteamok/pxt-microbit`: current SmartTeam pilot.
 - `smartteamok/exp-microbit-fifa-v1`: prior extension containing hardware logic for several custom blocks.
 
-## Current Baseline
+## Repository origin
 
-Workspace source is now cloned from:
+Workspace continues to track the SmartTeam micro:bit fork (for example `smartteamok/pxt-microbit`, branch `smartteam/course-target-plan`). The tree under `/Users/marianobat/dev/makecode-st2` is no longer a stock micro:bit-only checkout.
 
-- Repository: `https://github.com/smartteamok/pxt-microbit.git`
-- Branch: `smartteam/course-target-plan`
-- Upstream branch cloned from: `master`
+## Current baseline (this workspace)
 
-The cloned `master` branch is currently close to stock `pxt-microbit`:
+- **`pxtarget.json`**: target `microbit`; `bundleddirs` includes `libs/smartteam-core`, `smartteam-outputs`, `smartteam-motors`, `smartteam-inputs`, and `libs/smartteam-course-1` … `smartteam-course-6`.
+- **`editor/extension.tsx`**: SmartTeam course selection at project creation, native toolbox tweaks (`smartTeamNativeToolbox`), loads per-grade `toolboxFilter` from bundled course packages (see [Course Filtering](course-filtering.md)).
+- **Functional packages** present: `smartteam-core`, `smartteam-outputs`, `smartteam-motors`, `smartteam-inputs` with blocks in each `main.ts`, English-first strings under `_locales/`, extra editor languages generated via `scripts/generate-smartteam-locales.js`.
+- **Course packages** present: `smartteam-course-1` … `smartteam-course-6` with `dependencies` and `toolboxFilter` in each `pxt.json`.
+- **`libs/blocksprj` / `libs/tsprj`**: remain generic default templates; they do not pin a fixed course profile.
 
-- `editor/extension.tsx` only initializes the normal micro:bit extension hooks.
-- `libs/blocksprj/pxt.json` and `libs/tsprj/pxt.json` depend on `core`, `radio`, and `microphone`.
-- No `libs/smartteam-*` packages are present yet.
+Packages described in [Category Taxonomy](category-taxonomy.md) but **not** in this tree yet (design / future port): e.g. `smartteam-shield`, `smartteam-display`, `smartteam-communication`. Treat `smartteamok/exp-microbit-fifa-v1` and older pilots as source material for those ports.
 
-This is a good clean baseline for building the target deliberately. The older SmartTeam pilot and FIFA extension should be treated as source material to port, not as code already present in this workspace.
+## Target model
 
-## Proposed Target Model
+One micro:bit-based target and multiple SmartTeam packages. Category ownership stays as in [Category Taxonomy](category-taxonomy.md).
 
-Use one micro:bit-based target and multiple SmartTeam packages.
+Implemented functional packages (see `libs/`):
 
-The toolbox category contract is documented in [Category Taxonomy](category-taxonomy.md). Package boundaries below should follow that taxonomy.
-
-Core packages:
-
-- `smartteam-core`: control wrappers and basic helpers.
-- `smartteam-shield`: shared enums, pin mapping, clamp/utilities.
-- `smartteam-outputs`: LEDs, buzzer, RGB outputs.
-- `smartteam-motors`: DC motor, robot movement, servo, fan.
-- `smartteam-inputs`: digital and analog inputs, split into `smartteamDigitalInputs` and `smartteamAnalogInputs` namespaces.
-- `smartteam-display`: LCD, RGB strip, later matrix 8x8.
-- `smartteam-communication`: Bluetooth/radio abstractions for grade 6, pending definition.
+- `smartteam-core`, `smartteam-outputs`, `smartteam-motors`, `smartteam-inputs`.
 
 Course profile packages:
 
-- `smartteam-course-1`
-- `smartteam-course-2`
-- `smartteam-course-3`
-- `smartteam-course-4`
-- `smartteam-course-5`
-- `smartteam-course-6`
-
-Each course package should define the toolbox policy for that grade.
+- `smartteam-course-1` through `smartteam-course-6` — each defines `toolboxFilter` and grade `dependencies`.
 
 ## Responsibility Boundaries
 
@@ -122,6 +105,7 @@ Use MakeCode localization mechanisms where possible:
 
 - block strings in `_locales/*-strings.json`
 - JSDoc strings in `_locales/*-jsdoc-strings.json`
+- for the four functional SmartTeam packages, run `node scripts/generate-smartteam-locales.js` after changing English base strings (keeps per-locale files and `pxt.json` `files` in sync), then `npx pxt buildtarget`
 - docs/cards localized through standard target documentation/localization flow
 
 Grade labels should not be hardcoded only in Spanish if they appear in UI/docs.

@@ -13,6 +13,8 @@ The goal is to keep category ownership simple:
 
 Higher MakeCode `weight` values appear closer to the top.
 
+**Course filters:** in `libs/smartteam-course-*/pxt.json` → `toolboxFilter.namespaces`, the mathematics category key must be **`Math`** (capital M), matching Blockly/MakeCode, not `math`. The table column “Owner namespace” for Matematicas uses `math` as a shorthand for the student-facing native math blocks category; do not copy that spelling into `toolboxFilter`.
+
 | Order | Visible label | Owner namespace | Owner package | Weight | Color | First grade | Policy |
 |---:|---|---|---|---:|---|---:|---|
 | 1 | Control | `loops` plus SmartTeam wrappers | `core`, `smartteam-core` | 100 | `#FF9800` | 1 | Keep native structural blocks, add SmartTeam wrappers where labels/API need simplification. |
@@ -61,11 +63,11 @@ Native structural blocks to curate:
 
 Use `smartteamOutputs` as a custom namespace.
 
-Initial groups:
+Initial groups (source strings in code are English; Spanish appears via `_locales`):
 
-- `Externos`
+- `External` (LEDs and similar on external pins)
 - `RGB`
-- `Zumbador`
+- `Buzzer` (`Zumbador` in student-facing Spanish locales)
 
 Native categories to hide or wrap:
 
@@ -99,12 +101,12 @@ Reasoning:
 Initial groups for `Entradas (D)`:
 
 - `micro:bit`
-- `Externos`
+- `External`
 
 Initial groups for `Entradas (~A)`:
 
 - `micro:bit`
-- `Externos`
+- `External`
 
 Native `input` should generally be hidden, then selected native input blocks should be reintroduced by wrappers or explicit curated blocks.
 
@@ -170,7 +172,7 @@ Course visibility:
 
 - Use `libs/smartteam-course-*/pxt.json` `toolboxFilter`. This is the only place where grade-specific visibility is declared. The editor reads it at runtime and does not duplicate the rules.
 
-For step-by-step editing recipes, see [Blocks and Filters Guide](blocks-and-filters-guide.md).
+For step-by-step editing recipes, see [Blocks and Filters Guide](blocks-and-filters-guide.md) and the short Spanish guides [Filtros y personalización de bloques](filtros-y-personalizacion-bloques.md) and [Bloques: función y creación](bloques-funcion-y-creacion.md).
 
 ## Localization Keys To Plan
 

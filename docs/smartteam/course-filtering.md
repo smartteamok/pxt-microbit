@@ -94,7 +94,7 @@ Current implementation:
 
 Important implementation detail: Blockly's built-in Mathematics namespace is `Math`, not `math`. Course filters must use the capitalized key.
 
-Day-to-day editing instructions for blocks, filters, categories, and colors live in [Blocks and Filters Guide](blocks-and-filters-guide.md).
+Day-to-day editing instructions for blocks, filters, categories, and colors live in [Blocks and Filters Guide](blocks-and-filters-guide.md). Short Spanish checklists: [Filtros y personalización de bloques](filtros-y-personalizacion-bloques.md), [Bloques: función y creación](bloques-funcion-y-creacion.md).
 
 Do not manually edit `docs/projects.md` as the source of truth. `pxt buildtarget` regenerates it from `targetconfig.galleries`.
 

@@ -19,6 +19,7 @@ Documents:
 - [Course Filtering](course-filtering.md): grade-based filtering model.
 - [Blocks and Filters Guide](blocks-and-filters-guide.md): operational recipes for adding/changing blocks, filters, categories, groups, and colors.
 - [Filtros y personalización de bloques](filtros-y-personalizacion-bloques.md): guía breve (archivos, pasos, rebuild).
+- [Bloques: función y creación](bloques-funcion-y-creacion.md): código en `main.ts`, locales, cursos, paquete nuevo.
 - [Block Matrix](block-matrix.md): initial block availability by grade.
 - [Native Blocks Inventory](native-blocks-inventory.md): audit template for native micro:bit blocks.
 - [Implementation Plan](implementation-plan.md): phased plan before coding.

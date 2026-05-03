@@ -18,13 +18,11 @@ Remote:
 
 - `origin https://github.com/smartteamok/pxt-microbit.git`
 
-## Current Local Changes
+## Current workspace
 
-SmartTeam planning documentation has been added:
+- `docs/smartteam/` — planning and operational docs.
 
-- `docs/smartteam/`
-
-Initial package skeletons have also been added:
+SmartTeam packages and course profiles in the tree:
 
 - `libs/smartteam-core`
 - `libs/smartteam-outputs`
@@ -37,21 +35,14 @@ Initial package skeletons have also been added:
 - `libs/smartteam-course-5`
 - `libs/smartteam-course-6`
 
-Target code changes are now tracked in:
+Target integration:
 
-- `pxtarget.json`
-- `editor/extension.tsx`
+- `pxtarget.json` — target id and `bundleddirs` listing the packages above.
+- `editor/extension.tsx` — SmartTeam course modal, toolbox filter injection, native category presentation (`smartTeamNativeToolbox`).
 
-## Baseline Findings
+## Historical note
 
-The public `master` branch originally cloned into this workspace was a clean micro:bit base:
-
-- `pxtarget.json` still identifies the target as `microbit`.
-- `editor/extension.tsx` contains only the standard micro:bit extension initialization.
-- `libs/blocksprj/pxt.json` depends on `core`, `radio`, and `microphone`.
-- `libs/tsprj/pxt.json` depends on `core`, `radio`, and `microphone`.
-
-This means the SmartTeam work should be treated as a controlled port into a clean base.
+The **original** upstream `master` imported into this line of work was a clean micro:bit base (`blocksprj` / `tsprj` depending only on `core`, `radio`, `microphone`). That snapshot is obsolete as a description of **this** workspace: SmartTeam packages and extension behavior are already present. Default project templates remain generic; grade-specific toolboxes come from the selected `smartteam-course-*` package.
 
 ## Source Material To Port Later
 
