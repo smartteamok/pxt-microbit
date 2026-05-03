@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Av",
+  "smartteamOutputs.SmartTeamLedState.On|block": "På",
+  "smartteamOutputs.playNote|block": "Spela ton $note med längd (ms) $duration på inbyggd summer",
+  "smartteamOutputs.playTone|block": "Spela ton $frequency med längd (ms) $duration på inbyggd summer",
+  "smartteamOutputs.setLedBrightness|block": "Sätt LED-ljusstyrka till $brightness på pinne $pin",
+  "smartteamOutputs.setLed|block": "$state LED på pinne $pin",
+  "smartteamOutputs.startMelody|block": "Starta melodi $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Stoppa inbyggd summer",
+  "smartteamOutputs|block": "Utgångar",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "Summer",
+  "{id:group}External": "Extern",
+  "{id:group}RGB": "RGB"
+}

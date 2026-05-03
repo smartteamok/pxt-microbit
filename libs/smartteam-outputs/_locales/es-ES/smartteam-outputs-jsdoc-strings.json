@@ -1,0 +1,19 @@
+{
+  "smartteamOutputs": "Bloques de salida SmartTeam.",
+  "smartteamOutputs.playNote": "Toca una nota musical en el zumbador integrado.",
+  "smartteamOutputs.playNote|param|duration": "duración en milisegundos",
+  "smartteamOutputs.playNote|param|note": "nota a tocar",
+  "smartteamOutputs.playTone": "Toca un tono en el zumbador integrado.",
+  "smartteamOutputs.playTone|param|duration": "duración en milisegundos",
+  "smartteamOutputs.playTone|param|frequency": "frecuencia en Hz",
+  "smartteamOutputs.setLed": "Enciende o apaga un LED externo.",
+  "smartteamOutputs.setLedBrightness": "Ajusta el brillo del LED externo con PWM de 0 a 1023.",
+  "smartteamOutputs.setLedBrightness|param|brightness": "valor de brillo de 0 a 1023",
+  "smartteamOutputs.setLedBrightness|param|pin": "pin de salida",
+  "smartteamOutputs.setLed|param|pin": "pin de salida",
+  "smartteamOutputs.setLed|param|state": "estado del LED",
+  "smartteamOutputs.startMelody": "Inicia una melodía integrada en el zumbador.",
+  "smartteamOutputs.startMelody|param|melody": "melodía a iniciar",
+  "smartteamOutputs.startMelody|param|mode": "modo de reproducción",
+  "smartteamOutputs.stopBuzzer": "Detiene todos los sonidos del zumbador integrado."
+}

@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "オフ",
+  "smartteamOutputs.SmartTeamLedState.On|block": "オン",
+  "smartteamOutputs.playNote|block": "内蔵ブザーで音符 $note を (ミリ秒) $duration 鳴らす",
+  "smartteamOutputs.playTone|block": "内蔵ブザーで $frequency Hz を (ミリ秒) $duration 鳴らす",
+  "smartteamOutputs.setLedBrightness|block": "ピン $pin のLEDの明るさを $brightness にする",
+  "smartteamOutputs.setLed|block": "ピン $pin のLEDを $state",
+  "smartteamOutputs.startMelody|block": "メロディ $melody を $mode で開始",
+  "smartteamOutputs.stopBuzzer|block": "内蔵ブザーを止める",
+  "smartteamOutputs|block": "出力",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "ブザー",
+  "{id:group}External": "外部",
+  "{id:group}RGB": "RGB"
+}

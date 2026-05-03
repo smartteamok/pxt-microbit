@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Выкл.",
+  "smartteamOutputs.SmartTeamLedState.On|block": "Вкл.",
+  "smartteamOutputs.playNote|block": "Играть ноту $note длительность (мс) $duration на встроенном пищалке",
+  "smartteamOutputs.playTone|block": "Играть тон $frequency длительность (мс) $duration на встроенном пищалке",
+  "smartteamOutputs.setLedBrightness|block": "Яркость LED $brightness на контакте $pin",
+  "smartteamOutputs.setLed|block": "$state LED на контакте $pin",
+  "smartteamOutputs.startMelody|block": "Начать мелодию $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Остановить встроенный зуммер",
+  "smartteamOutputs|block": "Выходы",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "Зуммер",
+  "{id:group}External": "Внешний",
+  "{id:group}RGB": "RGB"
+}

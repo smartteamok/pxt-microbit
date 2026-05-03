@@ -1,13 +1,13 @@
 {
-  "smartteamAnalogInputs.microbitLightLevel|block": "NIVEL DE LUZ en el sensor de microbit",
-  "smartteamAnalogInputs|block": "Entradas (~A)",
-  "smartteamDigitalInputs.buttonPin|block": "BOTON en el pin $pin",
-  "smartteamDigitalInputs.logoIsPressed|block": "LOGO esta presionado",
-  "smartteamDigitalInputs.microbitButtonPressed|block": "Boton $button esta presionado",
-  "smartteamDigitalInputs.obstaclePin|block": "OBSTACULO en el pin $pin",
-  "smartteamDigitalInputs|block": "Entradas (D)",
+  "smartteamAnalogInputs.microbitLightLevel|block": "Light level on micro:bit sensor",
+  "smartteamAnalogInputs|block": "Inputs (~A)",
+  "smartteamDigitalInputs.buttonPin|block": "Button on pin $pin",
+  "smartteamDigitalInputs.logoIsPressed|block": "Logo is pressed",
+  "smartteamDigitalInputs.microbitButtonPressed|block": "Button $button is pressed",
+  "smartteamDigitalInputs.obstaclePin|block": "Obstacle on pin $pin",
+  "smartteamDigitalInputs|block": "Inputs (D)",
   "{id:category}SmartteamAnalogInputs": "SmartteamAnalogInputs",
   "{id:category}SmartteamDigitalInputs": "SmartteamDigitalInputs",
-  "{id:group}Externos": "Externos",
+  "{id:group}External": "External",
   "{id:group}micro:bit": "micro:bit"
 }

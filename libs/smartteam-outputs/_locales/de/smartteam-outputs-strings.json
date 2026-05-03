@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Aus",
+  "smartteamOutputs.SmartTeamLedState.On|block": "Ein",
+  "smartteamOutputs.playNote|block": "Note $note mit Dauer (ms) $duration auf integriertem Summer abspielen",
+  "smartteamOutputs.playTone|block": "Ton $frequency mit Dauer (ms) $duration auf integriertem Summer abspielen",
+  "smartteamOutputs.setLedBrightness|block": "LED-Helligkeit auf $brightness an Pin $pin setzen",
+  "smartteamOutputs.setLed|block": "$state LED an Pin $pin",
+  "smartteamOutputs.startMelody|block": "Melodie $melody $mode starten",
+  "smartteamOutputs.stopBuzzer|block": "Integrierten Summer stoppen",
+  "smartteamOutputs|block": "Ausgänge",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "Summer",
+  "{id:group}External": "Extern",
+  "{id:group}RGB": "RGB"
+}

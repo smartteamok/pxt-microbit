@@ -1,0 +1,10 @@
+{
+  "smartteamMotors.SmartTeamMotorDirection.Left|block": "lewo",
+  "smartteamMotors.SmartTeamMotorDirection.Right|block": "prawo",
+  "smartteamMotors.turnDcMotor|block": "Obróć silnik DC w stronę $direction na pinie $pin",
+  "smartteamMotors|block": "Silniki",
+  "{id:category}SmartteamMotors": "SmartteamMotors",
+  "{id:group}DC Motor": "Silnik DC",
+  "{id:group}Servo": "Serwo",
+  "{id:group}Robot movement": "Ruch robota"
+}

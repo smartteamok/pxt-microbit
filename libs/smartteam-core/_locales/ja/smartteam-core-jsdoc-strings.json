@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "SmartTeam 制御とヘルパー。",
+  "smartteamCore.onButtonPressed": "micro-bit のボタンが押されたときにコードを実行。",
+  "smartteamCore.onButtonPressed|param|button": "button to handle",
+  "smartteamCore.onGesture": "micro-bit のジェスチャーを検出したときにコードを実行。",
+  "smartteamCore.onGesture|param|gesture": "gesture to handle",
+  "smartteamCore.waitMs": "指定したミリ秒だけ待つ。",
+  "smartteamCore.waitMs|param|ms": "time to wait in milliseconds"
+}

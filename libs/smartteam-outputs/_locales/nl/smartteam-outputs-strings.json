@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Uit",
+  "smartteamOutputs.SmartTeamLedState.On|block": "Aan",
+  "smartteamOutputs.playNote|block": "Speel noot $note met duur (ms) $duration op ingebouwde zoemer",
+  "smartteamOutputs.playTone|block": "Speel toon $frequency met duur (ms) $duration op ingebouwde zoemer",
+  "smartteamOutputs.setLedBrightness|block": "Stel LED-helderheid in op $brightness op pin $pin",
+  "smartteamOutputs.setLed|block": "$state LED op pin $pin",
+  "smartteamOutputs.startMelody|block": "Start melodie $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Stop ingebouwde zoemer",
+  "smartteamOutputs|block": "Uitgangen",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "Zoemer",
+  "{id:group}External": "Extern",
+  "{id:group}RGB": "RGB"
+}

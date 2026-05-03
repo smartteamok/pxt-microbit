@@ -1,14 +1,14 @@
 {
-  "smartteamOutputs.SmartTeamLedState.Off|block": "Apagar",
-  "smartteamOutputs.SmartTeamLedState.On|block": "Prender",
-  "smartteamOutputs.playNote|block": "Reproducir nota $note con duracion (ms) $duration en el ZUMBADOR integrado",
-  "smartteamOutputs.playTone|block": "Reproducir tono $frequency con duracion (ms) $duration en el ZUMBADOR integrado",
-  "smartteamOutputs.setLedBrightness|block": "Ajustar el brillo a $brightness del LED en el pin $pin",
-  "smartteamOutputs.setLed|block": "$state el LED en el pin $pin",
-  "smartteamOutputs.startMelody|block": "Comenzar melodia $melody $mode",
-  "smartteamOutputs.stopBuzzer|block": "Apagar ZUMBADOR integrado",
-  "smartteamOutputs|block": "Salidas",
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Off",
+  "smartteamOutputs.SmartTeamLedState.On|block": "On",
+  "smartteamOutputs.playNote|block": "Play note $note with duration (ms) $duration on integrated buzzer",
+  "smartteamOutputs.playTone|block": "Play tone $frequency with duration (ms) $duration on integrated buzzer",
+  "smartteamOutputs.setLedBrightness|block": "Set LED brightness to $brightness on pin $pin",
+  "smartteamOutputs.setLed|block": "$state LED on pin $pin",
+  "smartteamOutputs.startMelody|block": "Start melody $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Stop integrated buzzer",
+  "smartteamOutputs|block": "Outputs",
   "{id:category}SmartteamOutputs": "SmartteamOutputs",
-  "{id:group}Externos": "Externos",
-  "{id:group}Zumbador": "Zumbador"
+  "{id:group}Buzzer": "Buzzer",
+  "{id:group}External": "External"
 }

@@ -1,0 +1,13 @@
+{
+  "smartteamAnalogInputs.microbitLightLevel|block": "Niveau de lumière du capteur micro:bit",
+  "smartteamAnalogInputs|block": "Entrées (~A)",
+  "smartteamDigitalInputs.buttonPin|block": "Bouton sur la broche $pin",
+  "smartteamDigitalInputs.logoIsPressed|block": "Le logo est pressé",
+  "smartteamDigitalInputs.microbitButtonPressed|block": "Le bouton $button est pressé",
+  "smartteamDigitalInputs.obstaclePin|block": "Obstacle sur la broche $pin",
+  "smartteamDigitalInputs|block": "Entrées (D)",
+  "{id:category}SmartteamAnalogInputs": "SmartteamAnalogInputs",
+  "{id:category}SmartteamDigitalInputs": "SmartteamDigitalInputs",
+  "{id:group}External": "Externe",
+  "{id:group}micro:bit": "micro:bit"
+}

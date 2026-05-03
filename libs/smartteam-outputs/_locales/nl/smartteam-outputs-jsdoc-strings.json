@@ -1,0 +1,19 @@
+{
+  "smartteamOutputs": "SmartTeam output blocks.",
+  "smartteamOutputs.playNote": "Play a musical note on the built-in buzzer.",
+  "smartteamOutputs.playNote|param|duration": "duration in milliseconds",
+  "smartteamOutputs.playNote|param|note": "note to play",
+  "smartteamOutputs.playTone": "Play a tone on the built-in buzzer.",
+  "smartteamOutputs.playTone|param|duration": "duration in milliseconds",
+  "smartteamOutputs.playTone|param|frequency": "tone frequency in Hz",
+  "smartteamOutputs.setLed": "Turn an external LED on or off.",
+  "smartteamOutputs.setLedBrightness": "Set external LED brightness with a PWM value from 0 to 1023.",
+  "smartteamOutputs.setLedBrightness|param|brightness": "brightness value from 0 to 1023",
+  "smartteamOutputs.setLedBrightness|param|pin": "output pin",
+  "smartteamOutputs.setLed|param|pin": "output pin",
+  "smartteamOutputs.setLed|param|state": "LED state",
+  "smartteamOutputs.startMelody": "Start a built-in melody on the built-in buzzer.",
+  "smartteamOutputs.startMelody|param|melody": "melody to start",
+  "smartteamOutputs.startMelody|param|mode": "playback mode",
+  "smartteamOutputs.stopBuzzer": "Stop all sounds on the built-in buzzer."
+}

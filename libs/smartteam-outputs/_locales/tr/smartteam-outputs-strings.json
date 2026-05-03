@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Kapat",
+  "smartteamOutputs.SmartTeamLedState.On|block": "Aç",
+  "smartteamOutputs.playNote|block": "Entegre zilden not $note süre (ms) $duration çal",
+  "smartteamOutputs.playTone|block": "Entegre zilden ton $frequency süre (ms) $duration çal",
+  "smartteamOutputs.setLedBrightness|block": "$pin pininde LED parlaklığını $brightness yap",
+  "smartteamOutputs.setLed|block": "$pin pininde LED $state",
+  "smartteamOutputs.startMelody|block": "Melodi başlat $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Entegre zili durdur",
+  "smartteamOutputs|block": "Çıkışlar",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "Zil",
+  "{id:group}External": "Harici",
+  "{id:group}RGB": "RGB"
+}

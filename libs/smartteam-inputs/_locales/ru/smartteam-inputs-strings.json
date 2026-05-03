@@ -1,0 +1,13 @@
+{
+  "smartteamAnalogInputs.microbitLightLevel|block": "Уровень освещённости датчика micro:bit",
+  "smartteamAnalogInputs|block": "Входы (~A)",
+  "smartteamDigitalInputs.buttonPin|block": "Кнопка на контакте $pin",
+  "smartteamDigitalInputs.logoIsPressed|block": "Логотип нажат",
+  "smartteamDigitalInputs.microbitButtonPressed|block": "Кнопка $button нажата",
+  "smartteamDigitalInputs.obstaclePin|block": "Препятствие на контакте $pin",
+  "smartteamDigitalInputs|block": "Входы (D)",
+  "{id:category}SmartteamAnalogInputs": "SmartteamAnalogInputs",
+  "{id:category}SmartteamDigitalInputs": "SmartteamDigitalInputs",
+  "{id:group}External": "Внешний",
+  "{id:group}micro:bit": "micro:bit"
+}

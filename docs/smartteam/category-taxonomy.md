@@ -164,11 +164,13 @@ Custom SmartTeam categories:
 Native categories:
 
 - Use `pxtarget.json` `appTheme.blockColors` for global native colors where possible.
-- Use `editor/extension.tsx` `toolboxOptions` only if native labels/order cannot be controlled cleanly from target settings.
+- Use `editor/extension.tsx` `toolboxOptions` (`smartTeamNativeToolbox`) for label, weight, and color overrides on native categories that need a SmartTeam-specific look.
 
 Course visibility:
 
-- Use `libs/smartteam-course-*/pxt.json` `toolboxFilter`.
+- Use `libs/smartteam-course-*/pxt.json` `toolboxFilter`. This is the only place where grade-specific visibility is declared. The editor reads it at runtime and does not duplicate the rules.
+
+For step-by-step editing recipes, see [Blocks and Filters Guide](blocks-and-filters-guide.md).
 
 ## Localization Keys To Plan
 

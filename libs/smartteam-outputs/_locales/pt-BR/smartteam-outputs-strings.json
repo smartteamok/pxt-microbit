@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Desligar",
+  "smartteamOutputs.SmartTeamLedState.On|block": "Ligar",
+  "smartteamOutputs.playNote|block": "Tocar nota $note com duração (ms) $duration no buzzer integrado",
+  "smartteamOutputs.playTone|block": "Tocar tom $frequency com duração (ms) $duration no buzzer integrado",
+  "smartteamOutputs.setLedBrightness|block": "Definir brilho do LED $brightness no pino $pin",
+  "smartteamOutputs.setLed|block": "$state LED no pino $pin",
+  "smartteamOutputs.startMelody|block": "Iniciar melodia $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Parar buzzer integrado",
+  "smartteamOutputs|block": "Saídas",
+  "{id:category}SmartteamOutputs": "SmartTeam Saídas",
+  "{id:group}Buzzer": "Buzzer",
+  "{id:group}External": "Externo",
+  "{id:group}RGB": "RGB"
+}

@@ -1,0 +1,13 @@
+{
+  "smartteamAnalogInputs.microbitLightLevel|block": "micro:bit センサーの明るさ",
+  "smartteamAnalogInputs|block": "入力 (~A)",
+  "smartteamDigitalInputs.buttonPin|block": "ピン $pin のボタン",
+  "smartteamDigitalInputs.logoIsPressed|block": "ロゴが押されている",
+  "smartteamDigitalInputs.microbitButtonPressed|block": "ボタン $button が押されている",
+  "smartteamDigitalInputs.obstaclePin|block": "ピン $pin の障害物センサー",
+  "smartteamDigitalInputs|block": "入力 (D)",
+  "{id:category}SmartteamAnalogInputs": "SmartteamAnalogInputs",
+  "{id:category}SmartteamDigitalInputs": "SmartteamDigitalInputs",
+  "{id:group}External": "外部",
+  "{id:group}micro:bit": "micro:bit"
+}

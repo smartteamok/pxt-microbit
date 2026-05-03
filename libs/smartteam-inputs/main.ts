@@ -1,18 +1,18 @@
 /**
  * SmartTeam digital input blocks.
  */
-//% block="Entradas (D)"
+//% block="Inputs (D)"
 //% color="#009688"
 //% icon="\uf2db"
 //% weight=70
-//% groups=["micro:bit", "Externos"]
+//% groups=["micro:bit", "External"]
 namespace smartteamDigitalInputs {
     /**
      * Check whether a micro:bit button is pressed.
      * @param button button to read
      */
     //% blockId=smartteam_inputs_microbit_button_pressed
-    //% block="Boton $button esta presionado"
+    //% block="Button $button is pressed"
     //% button.defl=Button.A
     //% group="micro:bit"
     //% weight=100
@@ -24,7 +24,7 @@ namespace smartteamDigitalInputs {
      * Check whether the micro:bit logo is pressed.
      */
     //% blockId=smartteam_inputs_logo_is_pressed
-    //% block="LOGO esta presionado"
+    //% block="Logo is pressed"
     //% group="micro:bit"
     //% weight=90
     export function logoIsPressed(): boolean {
@@ -36,10 +36,10 @@ namespace smartteamDigitalInputs {
      * @param pin input pin
      */
     //% blockId=smartteam_inputs_button_pin
-    //% block="BOTON en el pin $pin"
+    //% block="Button on pin $pin"
     //% pin.shadow=digital_pin_shadow
     //% pin.defl=DigitalPin.P0
-    //% group="Externos"
+    //% group="External"
     //% weight=80
     export function buttonPin(pin: DigitalPin): boolean {
         return pins.digitalReadPin(pin) === 1;
@@ -50,10 +50,10 @@ namespace smartteamDigitalInputs {
      * @param pin input pin
      */
     //% blockId=smartteam_inputs_obstacle_pin
-    //% block="OBSTACULO en el pin $pin"
+    //% block="Obstacle on pin $pin"
     //% pin.shadow=digital_pin_shadow
     //% pin.defl=DigitalPin.P0
-    //% group="Externos"
+    //% group="External"
     //% weight=70
     export function obstaclePin(pin: DigitalPin): boolean {
         return pins.digitalReadPin(pin) === 1;
@@ -63,17 +63,17 @@ namespace smartteamDigitalInputs {
 /**
  * SmartTeam analog input blocks.
  */
-//% block="Entradas (~A)"
+//% block="Inputs (~A)"
 //% color="#00A3A3"
 //% icon="\uf1ec"
 //% weight=65
-//% groups=["micro:bit", "Externos"]
+//% groups=["micro:bit", "External"]
 namespace smartteamAnalogInputs {
     /**
      * Read the micro:bit light level.
      */
     //% blockId=smartteam_inputs_microbit_light_level
-    //% block="NIVEL DE LUZ en el sensor de microbit"
+    //% block="Light level on micro:bit sensor"
     //% group="micro:bit"
     //% weight=100
     export function microbitLightLevel(): number {

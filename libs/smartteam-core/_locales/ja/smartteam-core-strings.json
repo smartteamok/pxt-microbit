@@ -1,0 +1,11 @@
+{
+  "smartteamCore.SmartTeamButton.A|block": "A",
+  "smartteamCore.SmartTeamButton.B|block": "B",
+  "smartteamCore.SmartTeamGesture.Shake|block": "振る",
+  "smartteamCore.onButtonPressed|block": "ボタン $button が押されたとき",
+  "smartteamCore.onGesture|block": "$gesture のとき",
+  "smartteamCore.waitMs|block": "待つ (ミリ秒) $ms",
+  "smartteamCore|block": "制御",
+  "{id:category}Loops": "ループ",
+  "{id:category}SmartteamCore": "SmartTeam Core"
+}

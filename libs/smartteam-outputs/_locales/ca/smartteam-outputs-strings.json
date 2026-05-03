@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Apagar",
+  "smartteamOutputs.SmartTeamLedState.On|block": "Encendre",
+  "smartteamOutputs.playNote|block": "Tocar nota $note amb durada (ms) $duration al brunzidor integrat",
+  "smartteamOutputs.playTone|block": "Tocar to $frequency amb durada (ms) $duration al brunzidor integrat",
+  "smartteamOutputs.setLedBrightness|block": "Ajustar brillantor del LED a $brightness al pin $pin",
+  "smartteamOutputs.setLed|block": "$state LED al pin $pin",
+  "smartteamOutputs.startMelody|block": "Iniciar melodia $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Aturar brunzidor integrat",
+  "smartteamOutputs|block": "Sortides",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "Brunzidor",
+  "{id:group}External": "Extern",
+  "{id:group}RGB": "RGB"
+}

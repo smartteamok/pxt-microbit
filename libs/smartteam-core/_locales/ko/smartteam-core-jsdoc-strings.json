@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "SmartTeam 제어 및 도우미.",
+  "smartteamCore.onButtonPressed": "micro:bit 버튼을 누르면 코드를 실행합니다.",
+  "smartteamCore.onButtonPressed|param|button": "button to handle",
+  "smartteamCore.onGesture": "micro:bit 제스처가 감지되면 코드를 실행합니다.",
+  "smartteamCore.onGesture|param|gesture": "gesture to handle",
+  "smartteamCore.waitMs": "밀리초 단위로 지정한 시간만큼 기다립니다.",
+  "smartteamCore.waitMs|param|ms": "time to wait in milliseconds"
+}

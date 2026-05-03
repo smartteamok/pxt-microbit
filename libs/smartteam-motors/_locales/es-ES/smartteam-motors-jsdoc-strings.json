@@ -1,0 +1,6 @@
+{
+  "smartteamMotors": "Bloques de motor SmartTeam.",
+  "smartteamMotors.turnDcMotor": "Gira un motor DC con un único pin digital de control.",
+  "smartteamMotors.turnDcMotor|param|direction": "dirección del motor",
+  "smartteamMotors.turnDcMotor|param|pin": "pin de control del motor"
+}

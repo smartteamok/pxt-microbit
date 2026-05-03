@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "끄기",
+  "smartteamOutputs.SmartTeamLedState.On|block": "켜기",
+  "smartteamOutputs.playNote|block": "내장 부저로 음표 $note 재생 (ms) $duration",
+  "smartteamOutputs.playTone|block": "내장 부저로 $frequency Hz 재생 (ms) $duration",
+  "smartteamOutputs.setLedBrightness|block": "핀 $pin LED 밝기를 $brightness 로 설정",
+  "smartteamOutputs.setLed|block": "핀 $pin LED $state",
+  "smartteamOutputs.startMelody|block": "멜로디 $melody $mode 시작",
+  "smartteamOutputs.stopBuzzer|block": "내장 부저 끄기",
+  "smartteamOutputs|block": "출력",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "부저",
+  "{id:group}External": "외부",
+  "{id:group}RGB": "RGB"
+}

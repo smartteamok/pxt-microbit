@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Apagar",
+  "smartteamOutputs.SmartTeamLedState.On|block": "Encender",
+  "smartteamOutputs.playNote|block": "Tocar nota $note con duración (ms) $duration en zumbador integrado",
+  "smartteamOutputs.playTone|block": "Tocar tono $frequency con duración (ms) $duration en zumbador integrado",
+  "smartteamOutputs.setLedBrightness|block": "Ajustar brillo del LED a $brightness en el pin $pin",
+  "smartteamOutputs.setLed|block": "$state LED en el pin $pin",
+  "smartteamOutputs.startMelody|block": "Iniciar melodía $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Apagar zumbador integrado",
+  "smartteamOutputs|block": "Salidas",
+  "{id:category}SmartteamOutputs": "SmartTeam Salidas",
+  "{id:group}Buzzer": "Zumbador",
+  "{id:group}External": "Externo",
+  "{id:group}RGB": "RGB"
+}

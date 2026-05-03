@@ -1,0 +1,13 @@
+{
+  "smartteamAnalogInputs.microbitLightLevel|block": "micro:bit 传感器亮度",
+  "smartteamAnalogInputs|block": "输入 (~A)",
+  "smartteamDigitalInputs.buttonPin|block": "引脚 $pin 上的按钮",
+  "smartteamDigitalInputs.logoIsPressed|block": "徽标被按下",
+  "smartteamDigitalInputs.microbitButtonPressed|block": "按钮 $button 被按下",
+  "smartteamDigitalInputs.obstaclePin|block": "引脚 $pin 上的障碍物",
+  "smartteamDigitalInputs|block": "输入 (D)",
+  "{id:category}SmartteamAnalogInputs": "SmartteamAnalogInputs",
+  "{id:category}SmartteamDigitalInputs": "SmartteamDigitalInputs",
+  "{id:group}External": "外部",
+  "{id:group}micro:bit": "micro:bit"
+}

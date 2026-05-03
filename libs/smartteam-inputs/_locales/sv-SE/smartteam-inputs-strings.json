@@ -1,0 +1,13 @@
+{
+  "smartteamAnalogInputs.microbitLightLevel|block": "Ljusnivå på micro:bit-sensor",
+  "smartteamAnalogInputs|block": "Inmatningar (~A)",
+  "smartteamDigitalInputs.buttonPin|block": "Knapp på pinne $pin",
+  "smartteamDigitalInputs.logoIsPressed|block": "Logotypen är nedtryckt",
+  "smartteamDigitalInputs.microbitButtonPressed|block": "Knapp $button är nedtryckt",
+  "smartteamDigitalInputs.obstaclePin|block": "Hinder på pinne $pin",
+  "smartteamDigitalInputs|block": "Inmatningar (D)",
+  "{id:category}SmartteamAnalogInputs": "SmartteamAnalogInputs",
+  "{id:category}SmartteamDigitalInputs": "SmartteamDigitalInputs",
+  "{id:group}External": "Extern",
+  "{id:group}micro:bit": "micro:bit"
+}

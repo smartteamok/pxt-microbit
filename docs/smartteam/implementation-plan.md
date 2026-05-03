@@ -136,6 +136,12 @@ Implemented course selection:
 - The selected grade filter is also persisted as the root project `toolboxFilter`, because dependency-level `toolboxFilter` is not sufficient to filter the active project toolbox.
 - `libs/blocksprj/pxt.json` and `libs/tsprj/pxt.json` no longer force a fixed course profile.
 
+Single source of truth for the grade filter:
+
+- The `toolboxFilter` for each grade lives only in `libs/smartteam-course-N/pxt.json`.
+- `editor/extension.tsx` keeps a small editor-only registry (`smartTeamCourseGrades`) with `{ grade, label, dependency }` and loads each filter at runtime from `pxt.appTarget.bundledpkgs[<dependency>][pxt.CONFIG_NAME]`.
+- The previous duplicated arrays (`smartTeamAlwaysHiddenNamespaces`, `smartTeamFutureControlBlocks`, `smartTeamFutureOutputBlocks`, `smartTeamFutureMotorBlocks`, `smartTeamFutureInputBlocks`, plus the literal `smartTeamCourses` filter shapes) have been removed.
+
 This keeps the MakeCode project creation flow intact while preventing new projects without an explicit course profile.
 
 Known files/areas to audit for cleanup:

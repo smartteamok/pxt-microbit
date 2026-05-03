@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Spegni",
+  "smartteamOutputs.SmartTeamLedState.On|block": "Accendi",
+  "smartteamOutputs.playNote|block": "Suona nota $note con durata (ms) $duration sul buzzer integrato",
+  "smartteamOutputs.playTone|block": "Suona tono $frequency con durata (ms) $duration sul buzzer integrato",
+  "smartteamOutputs.setLedBrightness|block": "Imposta luminosità LED a $brightness sul pin $pin",
+  "smartteamOutputs.setLed|block": "$state LED sul pin $pin",
+  "smartteamOutputs.startMelody|block": "Avvia melodia $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Ferma buzzer integrato",
+  "smartteamOutputs|block": "Uscite",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "Cicalino",
+  "{id:group}External": "Esterno",
+  "{id:group}RGB": "RGB"
+}

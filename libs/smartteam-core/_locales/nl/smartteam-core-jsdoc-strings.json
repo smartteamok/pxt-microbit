@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "SmartTeam-besturing en hulpen.",
+  "smartteamCore.onButtonPressed": "Voert code uit wanneer een micro:bit-knop wordt ingedrukt.",
+  "smartteamCore.onButtonPressed|param|button": "button to handle",
+  "smartteamCore.onGesture": "Voert code uit wanneer een micro:bit-gebaar wordt gedetecteerd.",
+  "smartteamCore.onGesture|param|gesture": "gesture to handle",
+  "smartteamCore.waitMs": "Wacht een aantal milliseconden.",
+  "smartteamCore.waitMs|param|ms": "time to wait in milliseconds"
+}

@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "SmartTeam 控制与辅助。",
+  "smartteamCore.onButtonPressed": "当 micro:bit 按钮被按下时运行代码。",
+  "smartteamCore.onButtonPressed|param|button": "button to handle",
+  "smartteamCore.onGesture": "当检测到 micro:bit 手势时运行代码。",
+  "smartteamCore.onGesture|param|gesture": "gesture to handle",
+  "smartteamCore.waitMs": "等待指定的毫秒数。",
+  "smartteamCore.waitMs|param|ms": "time to wait in milliseconds"
+}

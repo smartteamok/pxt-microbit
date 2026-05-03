@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "SmartTeam-Steuerung und Hilfen.",
+  "smartteamCore.onButtonPressed": "Führt Code aus, wenn eine micro:bit-Taste gedrückt wird.",
+  "smartteamCore.onButtonPressed|param|button": "button to handle",
+  "smartteamCore.onGesture": "Führt Code aus, wenn eine micro:bit-Geste erkannt wird.",
+  "smartteamCore.onGesture|param|gesture": "gesture to handle",
+  "smartteamCore.waitMs": "Wartet eine Anzahl von Millisekunden.",
+  "smartteamCore.waitMs|param|ms": "time to wait in milliseconds"
+}

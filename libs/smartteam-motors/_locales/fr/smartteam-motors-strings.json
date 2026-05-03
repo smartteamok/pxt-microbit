@@ -1,0 +1,10 @@
+{
+  "smartteamMotors.SmartTeamMotorDirection.Left|block": "gauche",
+  "smartteamMotors.SmartTeamMotorDirection.Right|block": "droite",
+  "smartteamMotors.turnDcMotor|block": "Tourner moteur DC vers $direction sur la broche $pin",
+  "smartteamMotors|block": "Moteurs",
+  "{id:category}SmartteamMotors": "SmartteamMotors",
+  "{id:group}DC Motor": "Moteur DC",
+  "{id:group}Servo": "Servo",
+  "{id:group}Robot movement": "Mouvement du robot"
+}

@@ -1,0 +1,11 @@
+{
+  "smartteamCore.SmartTeamButton.A|block": "A",
+  "smartteamCore.SmartTeamButton.B|block": "B",
+  "smartteamCore.SmartTeamGesture.Shake|block": "흔들기",
+  "smartteamCore.onButtonPressed|block": "$button 버튼을 눌렀을 때",
+  "smartteamCore.onGesture|block": "$gesture 일 때",
+  "smartteamCore.waitMs|block": "기다리기(밀리초) $ms",
+  "smartteamCore|block": "제어",
+  "{id:category}Loops": "반복",
+  "{id:category}SmartteamCore": "SmartTeam Core"
+}

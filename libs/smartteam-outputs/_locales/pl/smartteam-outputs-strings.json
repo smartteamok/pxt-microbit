@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Wyłącz",
+  "smartteamOutputs.SmartTeamLedState.On|block": "Włącz",
+  "smartteamOutputs.playNote|block": "Zagraj nutę $note przez (ms) $duration na wbudowanym brzęczyku",
+  "smartteamOutputs.playTone|block": "Zagraj ton $frequency przez (ms) $duration na wbudowanym brzęczyku",
+  "smartteamOutputs.setLedBrightness|block": "Ustaw jasność LED na $brightness na pinie $pin",
+  "smartteamOutputs.setLed|block": "$state LED na pinie $pin",
+  "smartteamOutputs.startMelody|block": "Rozpocznij melodię $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Zatrzymaj wbudowany brzęczyk",
+  "smartteamOutputs|block": "Wyjścia",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "Brzęczyk",
+  "{id:group}External": "Zewnętrzny",
+  "{id:group}RGB": "RGB"
+}

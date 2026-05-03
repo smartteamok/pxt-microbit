@@ -1,0 +1,12 @@
+{
+  "smartteamAnalogInputs": "Bloques de entradas analógicas SmartTeam.",
+  "smartteamAnalogInputs.microbitLightLevel": "Lee el nivel de luz del micro:bit.",
+  "smartteamDigitalInputs": "Bloques de entradas digitales SmartTeam.",
+  "smartteamDigitalInputs.buttonPin": "Lee un pulsador externo en un pin digital.",
+  "smartteamDigitalInputs.buttonPin|param|pin": "pin de entrada",
+  "smartteamDigitalInputs.logoIsPressed": "Comprueba si el logo del micro:bit está pulsado.",
+  "smartteamDigitalInputs.microbitButtonPressed": "Comprueba si un botón del micro:bit está pulsado.",
+  "smartteamDigitalInputs.microbitButtonPressed|param|button": "botón a leer",
+  "smartteamDigitalInputs.obstaclePin": "Lee un sensor de obstáculos en un pin digital.",
+  "smartteamDigitalInputs.obstaclePin|param|pin": "pin de entrada"
+}

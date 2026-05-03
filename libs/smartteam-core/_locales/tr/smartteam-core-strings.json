@@ -1,0 +1,11 @@
+{
+  "smartteamCore.SmartTeamButton.A|block": "A",
+  "smartteamCore.SmartTeamButton.B|block": "B",
+  "smartteamCore.SmartTeamGesture.Shake|block": "Salla",
+  "smartteamCore.onButtonPressed|block": "$button düğmesine basıldığında",
+  "smartteamCore.onGesture|block": "$gesture olduğunda",
+  "smartteamCore.waitMs|block": "Bekle (ms) $ms",
+  "smartteamCore|block": "Kontrol",
+  "{id:category}Loops": "Döngüler",
+  "{id:category}SmartteamCore": "SmartTeam Core"
+}

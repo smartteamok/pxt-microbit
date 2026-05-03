@@ -1,0 +1,10 @@
+{
+  "smartteamMotors.SmartTeamMotorDirection.Left|block": "влево",
+  "smartteamMotors.SmartTeamMotorDirection.Right|block": "вправо",
+  "smartteamMotors.turnDcMotor|block": "Повернуть DC-мотор $direction на контакте $pin",
+  "smartteamMotors|block": "Моторы",
+  "{id:category}SmartteamMotors": "SmartteamMotors",
+  "{id:group}DC Motor": "DC-мотор",
+  "{id:group}Servo": "Серво",
+  "{id:group}Robot movement": "Движение робота"
+}

@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "Controles e utilitários SmartTeam.",
+  "smartteamCore.onButtonPressed": "Executa o código quando um botão do micro:bit é pressionado.",
+  "smartteamCore.onButtonPressed|param|button": "botão a tratar",
+  "smartteamCore.onGesture": "Executa o código quando um gesto do micro:bit é detectado.",
+  "smartteamCore.onGesture|param|gesture": "gesto a tratar",
+  "smartteamCore.waitMs": "Aguarda por alguns milissegundos.",
+  "smartteamCore.waitMs|param|ms": "tempo de espera em milissegundos"
+}

@@ -1,13 +1,8 @@
 {
 	"folders": [
 		{
-			"path": "../pxt"
-		},
-		{
-			"path": "../pxt-common-packages"
-		},
-		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {}
 }

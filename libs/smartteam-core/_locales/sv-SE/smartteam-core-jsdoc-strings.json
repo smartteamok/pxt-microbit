@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "SmartTeam-styrning och hjälpfunktioner.",
+  "smartteamCore.onButtonPressed": "Kör kod när en micro:bit-knapp trycks.",
+  "smartteamCore.onButtonPressed|param|button": "button to handle",
+  "smartteamCore.onGesture": "Kör kod när en micro:bit-gest identifieras.",
+  "smartteamCore.onGesture|param|gesture": "gesture to handle",
+  "smartteamCore.waitMs": "Väntar ett antal millisekunder.",
+  "smartteamCore.waitMs|param|ms": "time to wait in milliseconds"
+}

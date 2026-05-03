@@ -1,0 +1,13 @@
+{
+  "smartteamAnalogInputs.microbitLightLevel|block": "micro:bit sensörü ışık seviyesi",
+  "smartteamAnalogInputs|block": "Girişler (~A)",
+  "smartteamDigitalInputs.buttonPin|block": "$pin pininde düğme",
+  "smartteamDigitalInputs.logoIsPressed|block": "Logo basılı",
+  "smartteamDigitalInputs.microbitButtonPressed|block": "$button düğmesi basılı",
+  "smartteamDigitalInputs.obstaclePin|block": "$pin pininde engel",
+  "smartteamDigitalInputs|block": "Girişler (D)",
+  "{id:category}SmartteamAnalogInputs": "SmartteamAnalogInputs",
+  "{id:category}SmartteamDigitalInputs": "SmartteamDigitalInputs",
+  "{id:group}External": "Harici",
+  "{id:group}micro:bit": "micro:bit"
+}

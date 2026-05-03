@@ -32,125 +32,64 @@ interface SmartTeamToolboxFilter {
     blocks: pxt.Map<SmartTeamFilterState>;
 }
 
+interface SmartTeamCourseGrade {
+    grade: number;
+    label: string;
+    dependency: string;
+}
+
 const smartTeamCourseDependencies = /^smartteam-course-\d+$/;
 
-const smartTeamAlwaysHiddenNamespaces = [
-    "basic",
-    "input",
-    "music",
-    "led",
-    "light",
-    "pins",
-    "control",
-    "game",
-    "images",
-    "arrays"
+// Editor-only metadata. The toolbox filter for each grade lives in
+// libs/smartteam-course-<N>/pxt.json and is loaded at runtime by
+// loadSmartTeamCourses(). Keep this list aligned with bundleddirs in pxtarget.json.
+const smartTeamCourseGrades: SmartTeamCourseGrade[] = [
+    { grade: 1, label: lf("1er grado"), dependency: "smartteam-course-1" },
+    { grade: 2, label: lf("2do grado"), dependency: "smartteam-course-2" },
+    { grade: 3, label: lf("3er grado"), dependency: "smartteam-course-3" },
+    { grade: 4, label: lf("4to grado"), dependency: "smartteam-course-4" },
+    { grade: 5, label: lf("5to grado"), dependency: "smartteam-course-5" },
+    { grade: 6, label: lf("6to grado"), dependency: "smartteam-course-6" }
 ];
 
-function hiddenMap(ids: string[]): pxt.Map<SmartTeamFilterState> {
-    const map: pxt.Map<SmartTeamFilterState> = {};
-    ids.forEach(id => map[id] = "hidden");
-    return map;
-}
+const smartTeamEmptyFilter: SmartTeamToolboxFilter = { namespaces: {}, blocks: {} };
 
-function courseFilter(namespaces: string[], blocks: string[] = []): SmartTeamToolboxFilter {
-    return {
-        namespaces: hiddenMap(namespaces),
-        blocks: hiddenMap(blocks)
-    };
-}
-
-const smartTeamFutureControlBlocks = [
-    "smartteam_control_if_then",
-    "smartteam_control_on_logo_pressed",
-    "smartteam_control_while",
-    "smartteam_control_start_stopwatch",
-    "smartteam_control_stopwatch"
-];
-
-const smartTeamFutureOutputBlocks = [
-    "smartteam_outputs_rgb_leds_color",
-    "smartteam_outputs_rgb_leds_rgb"
-];
-
-const smartTeamFutureMotorBlocks = [
-    "smartteam_motors_servo_set_angle",
-    "smartteam_motors_servo_move_gradually",
-    "smartteam_motors_robot_move",
-    "smartteam_motors_robot_move_speed",
-    "smartteam_motors_robot_motor_turn",
-    "smartteam_motors_robot_motor_turn_speed"
-];
-
-const smartTeamFutureInputBlocks = [
-    "smartteam_inputs_touch_pin",
-    "smartteam_inputs_temperature_pin",
-    "smartteam_inputs_ultrasonic_pin",
-    "smartteam_inputs_line_follower",
-    "smartteam_inputs_light_pin",
-    "smartteam_inputs_soil_pin",
-    "smartteam_inputs_potentiometer_pin",
-    "smartteam_inputs_joystick_axis"
-];
-
-const smartTeamCourses: SmartTeamCourseDefinition[] = [
-    {
-        grade: 1,
-        label: lf("1er grado"),
-        dependency: "smartteam-course-1",
-        toolboxFilter: courseFilter(
-            smartTeamAlwaysHiddenNamespaces.concat(["serial", "radio", "logic", "Math", "text", "variables", "functions"]),
-            smartTeamFutureControlBlocks.concat(smartTeamFutureOutputBlocks, smartTeamFutureMotorBlocks)
-        )
-    },
-    {
-        grade: 2,
-        label: lf("2do grado"),
-        dependency: "smartteam-course-2",
-        toolboxFilter: courseFilter(
-            smartTeamAlwaysHiddenNamespaces.concat(["serial", "radio", "logic", "Math", "text", "variables", "functions"]),
-            smartTeamFutureControlBlocks.concat(smartTeamFutureMotorBlocks.slice(2))
-        )
-    },
-    {
-        grade: 3,
-        label: lf("3er grado"),
-        dependency: "smartteam-course-3",
-        toolboxFilter: courseFilter(
-            smartTeamAlwaysHiddenNamespaces.concat(["serial", "radio", "text", "variables", "functions"]),
-            [
-                "smartteam_control_while",
-                "smartteam_control_start_stopwatch",
-                "smartteam_control_stopwatch",
-                "smartteam_inputs_touch_pin"
-            ].concat(smartTeamFutureInputBlocks.slice(1), smartTeamFutureMotorBlocks.slice(2))
-        )
-    },
-    {
-        grade: 4,
-        label: lf("4to grado"),
-        dependency: "smartteam-course-4",
-        toolboxFilter: courseFilter(
-            smartTeamAlwaysHiddenNamespaces.concat(["serial", "radio", "variables", "functions"]),
-            smartTeamFutureInputBlocks.slice(1).concat(smartTeamFutureMotorBlocks.slice(3))
-        )
-    },
-    {
-        grade: 5,
-        label: lf("5to grado"),
-        dependency: "smartteam-course-5",
-        toolboxFilter: courseFilter(
-            smartTeamAlwaysHiddenNamespaces.concat(["serial", "radio"]),
-            ["function_definition_return", "function_return_if"]
-        )
-    },
-    {
-        grade: 6,
-        label: lf("6to grado"),
-        dependency: "smartteam-course-6",
-        toolboxFilter: courseFilter(smartTeamAlwaysHiddenNamespaces)
+function readSmartTeamCourseFilter(dependency: string): SmartTeamToolboxFilter {
+    const bundled = pxt.appTarget && pxt.appTarget.bundledpkgs && pxt.appTarget.bundledpkgs[dependency];
+    if (!bundled) {
+        pxt.log(`SmartTeam: bundled package not found for ${dependency}`);
+        return smartTeamEmptyFilter;
     }
-];
+
+    const raw = bundled[pxt.CONFIG_NAME];
+    if (!raw) {
+        pxt.log(`SmartTeam: ${pxt.CONFIG_NAME} missing in ${dependency}`);
+        return smartTeamEmptyFilter;
+    }
+
+    try {
+        const config = JSON.parse(raw) as pxt.PackageConfig;
+        const filter = config.toolboxFilter;
+        if (!filter)
+            return smartTeamEmptyFilter;
+        return {
+            namespaces: (filter.namespaces || {}) as pxt.Map<SmartTeamFilterState>,
+            blocks: (filter.blocks || {}) as pxt.Map<SmartTeamFilterState>
+        };
+    } catch (e) {
+        pxt.log(`SmartTeam: failed to parse ${pxt.CONFIG_NAME} for ${dependency}`);
+        return smartTeamEmptyFilter;
+    }
+}
+
+function loadSmartTeamCourses(): SmartTeamCourseDefinition[] {
+    return smartTeamCourseGrades.map(meta => ({
+        grade: meta.grade,
+        label: meta.label,
+        dependency: meta.dependency,
+        toolboxFilter: readSmartTeamCourseFilter(meta.dependency)
+    }));
+}
 
 class SmartTeamCoursePicker extends React.Component<SmartTeamCoursePickerProps, SmartTeamCoursePickerState> {
     constructor(props: SmartTeamCoursePickerProps) {
@@ -191,6 +130,7 @@ class SmartTeamCoursePicker extends React.Component<SmartTeamCoursePickerProps, 
 }
 
 async function askSmartTeamCourseAsync(confirmAsync: (options: any) => Promise<number>): Promise<SmartTeamCourseDefinition | undefined> {
+    const courses = loadSmartTeamCourses();
     let showRequiredMessage = false;
 
     while (true) {
@@ -198,7 +138,7 @@ async function askSmartTeamCourseAsync(confirmAsync: (options: any) => Promise<n
         const choice = await confirmAsync({
             header: lf("Nuevo proyecto SmartTeam"),
             jsx: <SmartTeamCoursePicker
-                courses={smartTeamCourses}
+                courses={courses}
                 showRequiredMessage={showRequiredMessage}
                 onSelect={course => selectedCourse = course}
             />,
@@ -348,13 +288,13 @@ pxt.editor.initExtensionsAsync = function (opts: pxt.editor.ExtensionOptions): P
         };
 
     const smartTeamNativeToolbox: pxt.editor.ToolboxDefinition = {
-        functions: { name: "Funciones", weight: 110, color: "#7E57C2" },
+        functions: { name: "Functions", weight: 110, color: "#7E57C2" },
         loops: { name: "Control", weight: 100, color: "#FF9800" },
-        logic: { name: "Lógica", weight: 50, color: "#3BC64A" },
-        maths: { name: "Matemáticas", weight: 45, color: "#9400D3" },
-        text: { name: "Texto", weight: 40, color: "#B8860B" },
+        logic: { name: "Logic", weight: 50, color: "#3BC64A" },
+        maths: { name: "Math", weight: 45, color: "#9400D3" },
+        text: { name: "Text", weight: 40, color: "#B8860B" },
         variables: { name: "Variables", weight: 35, color: "#DC143C" },
-        arrays: { name: "Listas", weight: 20, color: "#E65722" }
+        arrays: { name: "Lists", weight: 20, color: "#E65722" }
     };
 
     const res: pxt.editor.ExtensionResult = {

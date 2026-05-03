@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "Éteindre",
+  "smartteamOutputs.SmartTeamLedState.On|block": "Allumer",
+  "smartteamOutputs.playNote|block": "Jouer la note $note durée (ms) $duration sur le buzzer intégré",
+  "smartteamOutputs.playTone|block": "Jouer le ton $frequency durée (ms) $duration sur le buzzer intégré",
+  "smartteamOutputs.setLedBrightness|block": "Régler la luminosité du LED à $brightness sur la broche $pin",
+  "smartteamOutputs.setLed|block": "$state LED sur la broche $pin",
+  "smartteamOutputs.startMelody|block": "Démarrer mélodie $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "Arrêter le buzzer intégré",
+  "smartteamOutputs|block": "Sorties",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "Buzzer",
+  "{id:group}External": "Externe",
+  "{id:group}RGB": "RVB"
+}

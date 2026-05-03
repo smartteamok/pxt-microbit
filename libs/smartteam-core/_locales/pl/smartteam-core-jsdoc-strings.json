@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "Sterowanie i pomocniki SmartTeam.",
+  "smartteamCore.onButtonPressed": "Uruchamia kod po naciśnięciu przycisku micro:bit.",
+  "smartteamCore.onButtonPressed|param|button": "button to handle",
+  "smartteamCore.onGesture": "Uruchamia kod po wykryciu gestu micro:bit.",
+  "smartteamCore.onGesture|param|gesture": "gesture to handle",
+  "smartteamCore.waitMs": "Czeka określoną liczbę milisekund.",
+  "smartteamCore.waitMs|param|ms": "time to wait in milliseconds"
+}

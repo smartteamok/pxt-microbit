@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "SmartTeam kontrol ve yardımcıları.",
+  "smartteamCore.onButtonPressed": "micro:bit düğmesine basıldığında kodu çalıştırır.",
+  "smartteamCore.onButtonPressed|param|button": "button to handle",
+  "smartteamCore.onGesture": "micro:bit hareketi algılandığında kodu çalıştırır.",
+  "smartteamCore.onGesture|param|gesture": "gesture to handle",
+  "smartteamCore.waitMs": "Belirtilen milisaniye kadar bekler.",
+  "smartteamCore.waitMs|param|ms": "time to wait in milliseconds"
+}

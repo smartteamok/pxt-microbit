@@ -1,0 +1,9 @@
+{
+  "smartteamCore": "Обёртки управления SmartTeam.",
+  "smartteamCore.onButtonPressed": "Запускает код при нажатии кнопки micro:bit.",
+  "smartteamCore.onButtonPressed|param|button": "button to handle",
+  "smartteamCore.onGesture": "Запускает код при обнаружении жеста micro:bit.",
+  "smartteamCore.onGesture|param|gesture": "gesture to handle",
+  "smartteamCore.waitMs": "Ждёт указанное число миллисекунд.",
+  "smartteamCore.waitMs|param|ms": "time to wait in milliseconds"
+}

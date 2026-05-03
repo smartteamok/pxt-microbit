@@ -15,7 +15,7 @@ namespace smartteamCore {
     }
 
     export enum SmartTeamGesture {
-        //% block="agitar"
+        //% block="Shake"
         Shake
     }
 
@@ -32,7 +32,7 @@ namespace smartteamCore {
      * @param ms time to wait in milliseconds
      */
     //% blockId=smartteam_core_wait_ms
-    //% block="Esperar (ms) $ms"
+    //% block="Wait (ms) $ms"
     //% ms.shadow=timePicker
     //% ms.defl=1000
     //% ms.min=0
@@ -46,7 +46,7 @@ namespace smartteamCore {
      * @param button button to handle
      */
     //% blockId=smartteam_control_on_button_pressed
-    //% block="Al presionar el boton $button"
+    //% block="On button $button pressed"
     //% button.defl=smartteamCore.SmartTeamButton.A
     //% weight=90
     export function onButtonPressed(button: SmartTeamButton, handler: () => void): void {
@@ -58,7 +58,7 @@ namespace smartteamCore {
      * @param gesture gesture to handle
      */
     //% blockId=smartteam_control_on_gesture
-    //% block="Al $gesture"
+    //% block="On $gesture"
     //% gesture.defl=smartteamCore.SmartTeamGesture.Shake
     //% weight=80
     export function onGesture(gesture: SmartTeamGesture, handler: () => void): void {

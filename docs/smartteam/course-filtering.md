@@ -1,22 +1,25 @@
 # Course Filtering
 
-## Current Pilot State
+## Single Source of Truth
 
-The existing SmartTeam pilot filters and curates the toolbox in three places:
+`libs/smartteam-course-<N>/pxt.json` is the only place where grade-specific toolbox visibility is declared. The editor reads this metadata at runtime; nothing in `editor/extension.tsx` re-declares it.
 
-1. `editor/extension.tsx`
-   - Renames native categories.
-   - Reorders categories.
-   - Recolors categories.
-   - Adds explicit block snippets for `Control` and `Logica`.
+The full filtering surface is split across three layers, each with one responsibility:
 
-2. SmartTeam package annotations
-   - Define categories and custom blocks.
-   - Use `blockNamespace` to move wrappers under native categories when needed.
-   - Use `blockHidden=true` for helper blocks.
+1. SmartTeam functional packages (`libs/smartteam-core`, `libs/smartteam-outputs`, `libs/smartteam-motors`, `libs/smartteam-inputs`, …)
+   - Declare the categories, groups, colors, weights, and stable `blockId` values.
+   - Use `blockNamespace` to attach wrappers to native categories (for example, `Control`).
+   - Use `blockHidden=true` for helper blocks that should never appear in the toolbox.
 
-3. `toolboxFilter` in project templates
-   - Hides native namespaces such as `input`, `music`, `led`, `light`, and `pins`.
+2. SmartTeam course profile packages (`libs/smartteam-course-1` through `libs/smartteam-course-6`)
+   - Declare the `dependencies` required by the grade.
+   - Declare the full `toolboxFilter` for that grade in `pxt.json`. This is the source of truth.
+   - Each `toolboxFilter` is self-contained: the always-hidden native namespaces are listed explicitly, not inferred.
+
+3. `editor/extension.tsx`
+   - Renames, reorders, and recolors native categories through `smartTeamNativeToolbox`.
+   - Owns the project-creation modal and the editor-only metadata (`grade`, `label`, `dependency`).
+   - Loads the per-grade `toolboxFilter` at runtime from `pxt.appTarget.bundledpkgs[<dependency>]["pxt.json"]`. It does not duplicate the rules.
 
 ## Recommended Course Filtering Model
 
@@ -78,6 +81,8 @@ The selected course package becomes part of the project's `pxt.json`, making the
 Current implementation:
 
 - Course profile packages live in `libs/smartteam-course-1` through `libs/smartteam-course-6`.
+- `editor/extension.tsx` keeps a small editor-only registry (`smartTeamCourseGrades`) with `{ grade, label, dependency }` for each course. The visible labels are wrapped in `lf(...)` so they participate in the editor localization pipeline.
+- `loadSmartTeamCourses()` reads each grade's `toolboxFilter` from `pxt.appTarget.bundledpkgs[<dependency>][pxt.CONFIG_NAME]` at runtime. The function falls back to an empty filter and logs through `pxt.log` if the metadata is missing or malformed.
 - `editor/extension.tsx` wraps `askForProjectCreationOptionsAsync` and opens a required course selector before project creation completes.
 - The selected course is saved by adding `smartteam-course-N` to the new project's dependencies.
 - `editor/extension.tsx` keeps the selected course while MakeCode finishes its own project creation flow, then injects the course dependency, root `toolboxFilter`, and `ProjectCreationOptions.filters` before `createProjectAsync` installs the project.
@@ -88,6 +93,8 @@ Current implementation:
 - The default `blocksprj` and `tsprj` templates remain generic; they should not force a fixed course profile.
 
 Important implementation detail: Blockly's built-in Mathematics namespace is `Math`, not `math`. Course filters must use the capitalized key.
+
+Day-to-day editing instructions for blocks, filters, categories, and colors live in [Blocks and Filters Guide](blocks-and-filters-guide.md).
 
 Do not manually edit `docs/projects.md` as the source of truth. `pxt buildtarget` regenerates it from `targetconfig.galleries`.
 

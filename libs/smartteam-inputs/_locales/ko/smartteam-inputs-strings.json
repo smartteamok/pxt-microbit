@@ -1,0 +1,13 @@
+{
+  "smartteamAnalogInputs.microbitLightLevel|block": "micro:bit 센서 밝기",
+  "smartteamAnalogInputs|block": "입력 (~A)",
+  "smartteamDigitalInputs.buttonPin|block": "핀 $pin의 버튼",
+  "smartteamDigitalInputs.logoIsPressed|block": "로고가 눌림",
+  "smartteamDigitalInputs.microbitButtonPressed|block": "버튼 $button이 눌림",
+  "smartteamDigitalInputs.obstaclePin|block": "핀 $pin의 장애물",
+  "smartteamDigitalInputs|block": "입력 (D)",
+  "{id:category}SmartteamAnalogInputs": "SmartteamAnalogInputs",
+  "{id:category}SmartteamDigitalInputs": "SmartteamDigitalInputs",
+  "{id:group}External": "외부",
+  "{id:group}micro:bit": "micro:bit"
+}

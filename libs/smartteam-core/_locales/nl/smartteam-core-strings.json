@@ -1,0 +1,11 @@
+{
+  "smartteamCore.SmartTeamButton.A|block": "A",
+  "smartteamCore.SmartTeamButton.B|block": "B",
+  "smartteamCore.SmartTeamGesture.Shake|block": "Schudden",
+  "smartteamCore.onButtonPressed|block": "Als knop $button wordt ingedrukt",
+  "smartteamCore.onGesture|block": "Bij $gesture",
+  "smartteamCore.waitMs|block": "Wacht (ms) $ms",
+  "smartteamCore|block": "Bediening",
+  "{id:category}Loops": "Lussen",
+  "{id:category}SmartteamCore": "SmartTeam Core"
+}

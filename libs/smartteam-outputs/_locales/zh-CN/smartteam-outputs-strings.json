@@ -1,0 +1,15 @@
+{
+  "smartteamOutputs.SmartTeamLedState.Off|block": "关",
+  "smartteamOutputs.SmartTeamLedState.On|block": "开",
+  "smartteamOutputs.playNote|block": "在内置蜂鸣器播放音符 $note，持续(毫秒) $duration",
+  "smartteamOutputs.playTone|block": "在内置蜂鸣器播放频率 $frequency，持续(毫秒) $duration",
+  "smartteamOutputs.setLedBrightness|block": "将引脚 $pin 的LED亮度设为 $brightness",
+  "smartteamOutputs.setLed|block": "$state 引脚 $pin 上的LED",
+  "smartteamOutputs.startMelody|block": "开始旋律 $melody $mode",
+  "smartteamOutputs.stopBuzzer|block": "停止内置蜂鸣器",
+  "smartteamOutputs|block": "输出",
+  "{id:category}SmartteamOutputs": "SmartteamOutputs",
+  "{id:group}Buzzer": "蜂鸣器",
+  "{id:group}External": "外部",
+  "{id:group}RGB": "RGB"
+}

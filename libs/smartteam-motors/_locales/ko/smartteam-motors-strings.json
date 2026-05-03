@@ -1,0 +1,10 @@
+{
+  "smartteamMotors.SmartTeamMotorDirection.Left|block": "왼쪽",
+  "smartteamMotors.SmartTeamMotorDirection.Right|block": "오른쪽",
+  "smartteamMotors.turnDcMotor|block": "핀 $pin 에서 DC 모터를 $direction 으로 돌리기",
+  "smartteamMotors|block": "모터",
+  "{id:category}SmartteamMotors": "SmartteamMotors",
+  "{id:group}DC Motor": "DC 모터",
+  "{id:group}Servo": "서보",
+  "{id:group}Robot movement": "로봇 움직임"
+}

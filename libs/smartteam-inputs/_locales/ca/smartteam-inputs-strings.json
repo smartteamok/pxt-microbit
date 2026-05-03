@@ -1,0 +1,13 @@
+{
+  "smartteamAnalogInputs.microbitLightLevel|block": "Nivell de llum del sensor micro:bit",
+  "smartteamAnalogInputs|block": "Entrades (~A)",
+  "smartteamDigitalInputs.buttonPin|block": "Botó al pin $pin",
+  "smartteamDigitalInputs.logoIsPressed|block": "El logo està premut",
+  "smartteamDigitalInputs.microbitButtonPressed|block": "El botó $button està premut",
+  "smartteamDigitalInputs.obstaclePin|block": "Obstacle al pin $pin",
+  "smartteamDigitalInputs|block": "Entrades (D)",
+  "{id:category}SmartteamAnalogInputs": "SmartteamAnalogInputs",
+  "{id:category}SmartteamDigitalInputs": "SmartteamDigitalInputs",
+  "{id:group}External": "Extern",
+  "{id:group}micro:bit": "micro:bit"
+}

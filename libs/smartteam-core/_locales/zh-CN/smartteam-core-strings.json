@@ -1,0 +1,11 @@
+{
+  "smartteamCore.SmartTeamButton.A|block": "A",
+  "smartteamCore.SmartTeamButton.B|block": "B",
+  "smartteamCore.SmartTeamGesture.Shake|block": "摇晃",
+  "smartteamCore.onButtonPressed|block": "当按下按钮 $button",
+  "smartteamCore.onGesture|block": "当 $gesture",
+  "smartteamCore.waitMs|block": "等待（毫秒）$ms",
+  "smartteamCore|block": "控制",
+  "{id:category}Loops": "循环",
+  "{id:category}SmartteamCore": "SmartTeam Core"
+}
