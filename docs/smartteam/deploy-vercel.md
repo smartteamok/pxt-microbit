@@ -21,7 +21,7 @@ Vercel ejecuta `npm install` y `npm run package` en cada push, y publica `built/
 
 `package.json` declara `engines.node >=18` para forzar runtime moderno (Vercel default ya es Node 20+).
 
-**CLI `pxt`:** `pxt-core` no expone el binario `pxt` en `node_modules/.bin`. En local a veces funciona `pxt` por instalación global; en Vercel no. Los scripts usan `npx --yes pxt@12.3.9` (alineado con la versión de `pxt-core` en `dependencies`).
+**CLI `pxt`:** el paquete npm [`pxt`](https://www.npmjs.com/package/pxt) (~**0.5.x**) es un **lanzador** que carga `node_modules/pxt-core` del target. **No** comparte número de versión con `pxt-core` (p. ej. 12.3.9): `npx pxt@12.3.9` falla con `ETARGET`. Este repo declara **`pxt@0.5.1`** en `devDependencies` para que tras `npm install` exista `node_modules/.bin/pxt` en Vercel y en CI (igual que un `npm i -g pxt` local).
 
 ### 2. Importar el repo en Vercel
 

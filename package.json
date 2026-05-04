@@ -15,9 +15,9 @@
     "license": "MIT",
     "homepage": "https://github.com/microsoft/pxt-microbit#readme",
     "scripts": {
-        "build:target": "npx --yes pxt@12.3.9 buildtarget",
-        "package": "npx --yes pxt@12.3.9 buildtarget && npx --yes pxt@12.3.9 staticpkg --route /",
-        "package:min": "npx --yes pxt@12.3.9 buildtarget && npx --yes pxt@12.3.9 staticpkg --route / --minify",
+        "build:target": "pxt buildtarget",
+        "package": "pxt buildtarget && pxt staticpkg --route /",
+        "package:min": "pxt buildtarget && pxt staticpkg --route / --minify",
         "preview": "npx --yes http-server built/packaged -p 3232 -c-1"
     },
     "files": [
@@ -45,6 +45,7 @@
         "@types/react-dom": "16.0.3",
         "@types/web-bluetooth": "0.0.4",
         "less": "3.13.1",
+        "pxt": "0.5.1",
         "react": "16.8.3",
         "react-dom": "16.11.0",
         "semantic-ui-less": "2.4.1",
