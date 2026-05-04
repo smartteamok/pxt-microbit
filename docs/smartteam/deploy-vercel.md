@@ -21,6 +21,8 @@ Vercel ejecuta `npm install` y `npm run package` en cada push, y publica `built/
 
 `package.json` declara `engines.node >=18` para forzar runtime moderno (Vercel default ya es Node 20+).
 
+**CLI `pxt`:** `pxt-core` no expone el binario `pxt` en `node_modules/.bin`. En local a veces funciona `pxt` por instalación global; en Vercel no. Los scripts usan `npx --yes pxt@12.3.9` (alineado con la versión de `pxt-core` en `dependencies`).
+
 ### 2. Importar el repo en Vercel
 
 - En Vercel: **Add New → Project → Import Git Repository** y elegir el fork SmartTeam.

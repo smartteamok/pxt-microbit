@@ -15,9 +15,9 @@
     "license": "MIT",
     "homepage": "https://github.com/microsoft/pxt-microbit#readme",
     "scripts": {
-        "build:target": "pxt buildtarget",
-        "package": "pxt buildtarget && pxt staticpkg --route /",
-        "package:min": "pxt buildtarget && pxt staticpkg --route / --minify",
+        "build:target": "npx --yes pxt@12.3.9 buildtarget",
+        "package": "npx --yes pxt@12.3.9 buildtarget && npx --yes pxt@12.3.9 staticpkg --route /",
+        "package:min": "npx --yes pxt@12.3.9 buildtarget && npx --yes pxt@12.3.9 staticpkg --route / --minify",
         "preview": "npx --yes http-server built/packaged -p 3232 -c-1"
     },
     "files": [
