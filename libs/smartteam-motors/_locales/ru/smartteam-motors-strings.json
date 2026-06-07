@@ -1,10 +1,12 @@
 {
   "smartteamMotors.SmartTeamMotorDirection.Left|block": "влево",
   "smartteamMotors.SmartTeamMotorDirection.Right|block": "вправо",
+  "smartteamMotors.moveServoGradually|block": "Move SERVO gradually to $angle degrees every $stepMs ms on pin $pin",
+  "smartteamMotors.setServoAngle|block": "Set SERVO to $angle degrees on pin $pin",
   "smartteamMotors.turnDcMotor|block": "Повернуть DC-мотор $direction на контакте $pin",
   "smartteamMotors|block": "Моторы",
   "{id:category}SmartteamMotors": "SmartteamMotors",
   "{id:group}DC Motor": "DC-мотор",
-  "{id:group}Servo": "Серво",
-  "{id:group}Robot movement": "Движение робота"
+  "{id:group}Robot movement": "Движение робота",
+  "{id:group}Servo": "Серво"
 }

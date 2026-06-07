@@ -21,6 +21,10 @@ En **`libs/smartteam-<área>/main.ts`** (`smartteam-core`, `smartteam-outputs`, 
 4. **Cursos:** el paquete debe estar en **`dependencies`** de cada `libs/smartteam-course-<N>/pxt.json` que deba incluir ese código. En **`toolboxFilter.blocks`**, usá **`"hidden"`** (y el resto de valores que defináis) para controlar en qué grado se ve el bloque.
 5. `node scripts/generate-smartteam-locales.js` si tocáis locales o el generador; **`npx pxt buildtarget`**.
 
+### Ejemplo actual: servo en Motores
+
+Los bloques de servo viven en **`libs/smartteam-motors/main.ts`**, dentro del namespace `smartteamMotors` y el grupo `Servo`. Sus IDs estables son `smartteam_motors_servo_set_angle` y `smartteam_motors_servo_move_gradually`. Como pertenecen al paquete `smartteam-motors`, aparecen en los cursos que dependen de ese paquete salvo que el curso los oculte explícitamente; 1° los lista como `"hidden"` en `libs/smartteam-course-1/pxt.json`, y 2° los deja visibles.
+
 ## Nuevo paquete de bloques (área nueva)
 
 1. Carpeta **`libs/<nombre>/`** con **`main.ts`**, **`pxt.json`** (`name`, `files`, `dependencies`, `public`).

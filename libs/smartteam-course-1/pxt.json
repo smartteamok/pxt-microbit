@@ -52,7 +52,9 @@
             "pxt_controls_for": "hidden",
             "pxt_controls_for_of": "hidden",
             "every_interval": "hidden",
-            "controls_flow_statements": "hidden"
+            "controls_flow_statements": "hidden",
+            "break_keyword": "hidden",
+            "continue_keyword": "hidden"
         }
     }
 }

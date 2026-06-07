@@ -1,10 +1,12 @@
 {
   "smartteamMotors.SmartTeamMotorDirection.Left|block": "esquerra",
   "smartteamMotors.SmartTeamMotorDirection.Right|block": "dreta",
+  "smartteamMotors.moveServoGradually|block": "Move SERVO gradually to $angle degrees every $stepMs ms on pin $pin",
+  "smartteamMotors.setServoAngle|block": "Set SERVO to $angle degrees on pin $pin",
   "smartteamMotors.turnDcMotor|block": "Girar motor CC cap a $direction al pin $pin",
   "smartteamMotors|block": "Motors",
   "{id:category}SmartteamMotors": "SmartteamMotors",
   "{id:group}DC Motor": "Motor CC",
-  "{id:group}Servo": "Servo",
-  "{id:group}Robot movement": "Moviment del robot"
+  "{id:group}Robot movement": "Moviment del robot",
+  "{id:group}Servo": "Servo"
 }

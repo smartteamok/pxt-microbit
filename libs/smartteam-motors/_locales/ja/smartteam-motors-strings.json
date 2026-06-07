@@ -1,10 +1,12 @@
 {
   "smartteamMotors.SmartTeamMotorDirection.Left|block": "左",
   "smartteamMotors.SmartTeamMotorDirection.Right|block": "右",
+  "smartteamMotors.moveServoGradually|block": "Move SERVO gradually to $angle degrees every $stepMs ms on pin $pin",
+  "smartteamMotors.setServoAngle|block": "Set SERVO to $angle degrees on pin $pin",
   "smartteamMotors.turnDcMotor|block": "ピン $pin で DCモーターを $direction に回す",
   "smartteamMotors|block": "モーター",
   "{id:category}SmartteamMotors": "SmartteamMotors",
   "{id:group}DC Motor": "DCモーター",
-  "{id:group}Servo": "サーボ",
-  "{id:group}Robot movement": "ロボットの動き"
+  "{id:group}Robot movement": "ロボットの動き",
+  "{id:group}Servo": "サーボ"
 }

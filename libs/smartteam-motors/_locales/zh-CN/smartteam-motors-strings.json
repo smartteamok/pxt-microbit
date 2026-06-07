@@ -1,10 +1,12 @@
 {
   "smartteamMotors.SmartTeamMotorDirection.Left|block": "左",
   "smartteamMotors.SmartTeamMotorDirection.Right|block": "右",
+  "smartteamMotors.moveServoGradually|block": "Move SERVO gradually to $angle degrees every $stepMs ms on pin $pin",
+  "smartteamMotors.setServoAngle|block": "Set SERVO to $angle degrees on pin $pin",
   "smartteamMotors.turnDcMotor|block": "引脚 $pin 上直流电机转向 $direction",
   "smartteamMotors|block": "电机",
   "{id:category}SmartteamMotors": "SmartteamMotors",
   "{id:group}DC Motor": "直流电机",
-  "{id:group}Servo": "舵机",
-  "{id:group}Robot movement": "机器人运动"
+  "{id:group}Robot movement": "机器人运动",
+  "{id:group}Servo": "舵机"
 }

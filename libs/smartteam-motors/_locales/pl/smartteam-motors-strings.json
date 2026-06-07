@@ -1,10 +1,12 @@
 {
   "smartteamMotors.SmartTeamMotorDirection.Left|block": "lewo",
   "smartteamMotors.SmartTeamMotorDirection.Right|block": "prawo",
+  "smartteamMotors.moveServoGradually|block": "Move SERVO gradually to $angle degrees every $stepMs ms on pin $pin",
+  "smartteamMotors.setServoAngle|block": "Set SERVO to $angle degrees on pin $pin",
   "smartteamMotors.turnDcMotor|block": "Obróć silnik DC w stronę $direction na pinie $pin",
   "smartteamMotors|block": "Silniki",
   "{id:category}SmartteamMotors": "SmartteamMotors",
   "{id:group}DC Motor": "Silnik DC",
-  "{id:group}Servo": "Serwo",
-  "{id:group}Robot movement": "Ruch robota"
+  "{id:group}Robot movement": "Ruch robota",
+  "{id:group}Servo": "Serwo"
 }

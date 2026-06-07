@@ -1,5 +1,12 @@
 {
   "smartteamMotors": "SmartTeam motor blocks.",
+  "smartteamMotors.moveServoGradually": "Move a servo gradually to an angle in degrees.",
+  "smartteamMotors.moveServoGradually|param|angle": "target servo angle in degrees",
+  "smartteamMotors.moveServoGradually|param|pin": "servo control pin",
+  "smartteamMotors.moveServoGradually|param|stepMs": "delay between each degree step in milliseconds",
+  "smartteamMotors.setServoAngle": "Set a servo to an angle in degrees.",
+  "smartteamMotors.setServoAngle|param|angle": "servo angle in degrees",
+  "smartteamMotors.setServoAngle|param|pin": "servo control pin",
   "smartteamMotors.turnDcMotor": "Turn a DC motor using a single digital control pin.",
   "smartteamMotors.turnDcMotor|param|direction": "motor direction",
   "smartteamMotors.turnDcMotor|param|pin": "motor control pin"

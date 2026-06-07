@@ -505,6 +505,8 @@ const MOTORS_STR = {
   "es-ES": {
     "smartteamMotors.SmartTeamMotorDirection.Left|block": "izquierda",
     "smartteamMotors.SmartTeamMotorDirection.Right|block": "derecha",
+    "smartteamMotors.moveServoGradually|block": "Mover gradualmente el SERVO al grado $angle cada $stepMs ms en el pin $pin",
+    "smartteamMotors.setServoAngle|block": "Posicionar el SERVO en el grado $angle en el pin $pin",
     "smartteamMotors.turnDcMotor|block": "Girar motor DC hacia la $direction en el pin $pin",
     "smartteamMotors|block": "Motores",
     "{id:category}SmartteamMotors": "SmartTeam Motores",
@@ -643,6 +645,13 @@ const MOTORS_STR = {
 const MOTORS_JSDOC = {
   "es-ES": {
     smartteamMotors: "Bloques de motor SmartTeam.",
+    "smartteamMotors.moveServoGradually": "Mueve gradualmente un servo hasta un ángulo en grados.",
+    "smartteamMotors.moveServoGradually|param|angle": "ángulo objetivo del servo en grados",
+    "smartteamMotors.moveServoGradually|param|pin": "pin de control del servo",
+    "smartteamMotors.moveServoGradually|param|stepMs": "demora entre cada paso de un grado, en milisegundos",
+    "smartteamMotors.setServoAngle": "Posiciona un servo en un ángulo en grados.",
+    "smartteamMotors.setServoAngle|param|angle": "ángulo del servo en grados",
+    "smartteamMotors.setServoAngle|param|pin": "pin de control del servo",
     "smartteamMotors.turnDcMotor": "Gira un motor DC con un único pin digital de control.",
     "smartteamMotors.turnDcMotor|param|direction": "dirección del motor",
     "smartteamMotors.turnDcMotor|param|pin": "pin de control del motor"

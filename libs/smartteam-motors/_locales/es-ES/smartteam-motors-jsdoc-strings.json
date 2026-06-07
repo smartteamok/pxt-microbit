@@ -1,5 +1,12 @@
 {
   "smartteamMotors": "Bloques de motor SmartTeam.",
+  "smartteamMotors.moveServoGradually": "Mueve gradualmente un servo hasta un ángulo en grados.",
+  "smartteamMotors.moveServoGradually|param|angle": "ángulo objetivo del servo en grados",
+  "smartteamMotors.moveServoGradually|param|pin": "pin de control del servo",
+  "smartteamMotors.moveServoGradually|param|stepMs": "demora entre cada paso de un grado, en milisegundos",
+  "smartteamMotors.setServoAngle": "Posiciona un servo en un ángulo en grados.",
+  "smartteamMotors.setServoAngle|param|angle": "ángulo del servo en grados",
+  "smartteamMotors.setServoAngle|param|pin": "pin de control del servo",
   "smartteamMotors.turnDcMotor": "Gira un motor DC con un único pin digital de control.",
   "smartteamMotors.turnDcMotor|param|direction": "dirección del motor",
   "smartteamMotors.turnDcMotor|param|pin": "pin de control del motor"

@@ -34,8 +34,8 @@ Status values:
 |---|---|---|---|---|
 | Salidas | Prender de color [color1]...[color6] los LEDs RGB en el pin [0] | `smartteam_outputs_rgb_leds_color` | `smartteamOutputs` | to-confirm; current pilot has single-color selection, extension has RGB strip logic |
 | Salidas | Ajustar el color a R [255] G [255] B [255] del modulo de LED RGB en el pin [0] | `smartteam_outputs_rgb_leds_rgb` | `smartteamOutputs` | existing-smartteam |
-| Motores | Posicionar en el grado [90] el SERVO en el pin [0] | `smartteam_motors_servo_set_angle` | `smartteamMotors` | existing-smartteam |
-| Motores | Mover gradualmente al grado [90] cada [10] [ms] el SERVO en el pin [0] | `smartteam_motors_servo_move_gradually` | `smartteamMotors` | existing-smartteam |
+| Motores | Posicionar en el grado [90] el SERVO en el pin [0] | `smartteam_motors_servo_set_angle` | `smartteamMotors` | implemented; hidden in grade 1 filter |
+| Motores | Mover gradualmente al grado [90] cada [10] [ms] el SERVO en el pin [0] | `smartteam_motors_servo_move_gradually` | `smartteamMotors` | implemented; hidden in grade 1 filter |
 
 ## Grades 3-6
 
