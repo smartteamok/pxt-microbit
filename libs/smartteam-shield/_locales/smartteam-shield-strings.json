@@ -1,0 +1,8 @@
+{
+  "smartteamShield.SmartTeamPort.Port0|block": "Port 0",
+  "smartteamShield.SmartTeamPort.Port1|block": "Port 1",
+  "smartteamShield.SmartTeamPort.Port2|block": "Port 2",
+  "smartteamShield.SmartTeamPort.Port3|block": "Port 3",
+  "smartteamShield|block": "smartteamShield",
+  "{id:category}SmartteamShield": "SmartteamShield"
+}

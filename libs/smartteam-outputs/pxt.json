@@ -38,6 +38,8 @@
     "public": true,
     "dependencies": {
         "core": "file:../core",
-        "microphone": "file:../microphone"
+        "microphone": "file:../microphone",
+        "neopixel": "file:../neopixel",
+        "smartteam-shield": "file:../smartteam-shield"
     }
 }

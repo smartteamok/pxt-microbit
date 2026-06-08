@@ -1,0 +1,10 @@
+{
+  "smartteamShield": "SmartTeam shield port mapping helpers.",
+  "smartteamShield.SmartTeamPort": "Student-facing RJ ports on the SmartTeam shield.\n* Current digital signal mapping from the kit reference:\n- Port 0 -> P0\n- Port 1 -> P2\n- Port 2 -> P11\n- Port 3 -> P5",
+  "smartteamShield.analogPinForPort": "Return the primary analog-capable signal pin for a SmartTeam shield port.",
+  "smartteamShield.analogPinForPort|param|port": "SmartTeam shield port",
+  "smartteamShield.digitalPinForPort": "Return the primary digital signal pin for a SmartTeam shield port.",
+  "smartteamShield.digitalPinForPort|param|port": "SmartTeam shield port",
+  "smartteamShield.portIndex": "Return a stable array index for a SmartTeam shield port.",
+  "smartteamShield.portIndex|param|port": "SmartTeam shield port"
+}

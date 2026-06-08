@@ -268,10 +268,28 @@ const OUTPUT_STR = {
   "es-ES": {
     "smartteamOutputs.SmartTeamLedState.Off|block": "Apagar",
     "smartteamOutputs.SmartTeamLedState.On|block": "Encender",
+    "smartteamOutputs.SmartTeamRgbColor.Blue|block": "azul",
+    "smartteamOutputs.SmartTeamRgbColor.Cyan|block": "celeste",
+    "smartteamOutputs.SmartTeamRgbColor.Green|block": "verde",
+    "smartteamOutputs.SmartTeamRgbColor.Off|block": "apagado",
+    "smartteamOutputs.SmartTeamRgbColor.Purple|block": "violeta",
+    "smartteamOutputs.SmartTeamRgbColor.Red|block": "rojo",
+    "smartteamOutputs.SmartTeamRgbColor.White|block": "blanco",
+    "smartteamOutputs.SmartTeamRgbColor.Yellow|block": "amarillo",
+    "smartteamOutputs.SmartTeamRgbLedSelection.All|block": "todos",
+    "smartteamOutputs.SmartTeamRgbLedSelection.Led0|block": "0",
+    "smartteamOutputs.SmartTeamRgbLedSelection.Led1|block": "1",
+    "smartteamOutputs.SmartTeamRgbLedSelection.Led2|block": "2",
+    "smartteamOutputs.SmartTeamRgbLedSelection.Led3|block": "3",
+    "smartteamOutputs.SmartTeamRgbLedSelection.Led4|block": "4",
+    "smartteamOutputs.SmartTeamRgbLedSelection.Led5|block": "5",
+    "smartteamOutputs.clearRgbLeds|block": "Apagar LEDs RGB en $port",
     "smartteamOutputs.playNote|block": "Tocar nota $note con duración (ms) $duration en zumbador integrado",
     "smartteamOutputs.playTone|block": "Tocar tono $frequency con duración (ms) $duration en zumbador integrado",
     "smartteamOutputs.setLedBrightness|block": "Ajustar brillo del LED a $brightness en el pin $pin",
     "smartteamOutputs.setLed|block": "$state LED en el pin $pin",
+    "smartteamOutputs.setRgbLed|block": "LED RGB en $port LED $led rojo $red verde $green azul $blue",
+    "smartteamOutputs.setRgbLedsColor|block": "LEDs RGB en $port mostrar color $color en $led",
     "smartteamOutputs.startMelody|block": "Iniciar melodía $melody $mode",
     "smartteamOutputs.stopBuzzer|block": "Apagar zumbador integrado",
     "smartteamOutputs|block": "Salidas",
@@ -482,6 +500,8 @@ const OUTPUT_STR = {
 const OUTPUT_JSDOC = {
   "es-ES": {
     smartteamOutputs: "Bloques de salida SmartTeam.",
+    "smartteamOutputs.clearRgbLeds": "Apaga la tira de LEDs RGB en un puerto del shield SmartTeam.",
+    "smartteamOutputs.clearRgbLeds|param|port": "puerto del shield SmartTeam",
     "smartteamOutputs.playNote": "Toca una nota musical en el zumbador integrado.",
     "smartteamOutputs.playNote|param|duration": "duración en milisegundos",
     "smartteamOutputs.playNote|param|note": "nota a tocar",
@@ -494,6 +514,16 @@ const OUTPUT_JSDOC = {
     "smartteamOutputs.setLedBrightness|param|pin": "pin de salida",
     "smartteamOutputs.setLed|param|pin": "pin de salida",
     "smartteamOutputs.setLed|param|state": "estado del LED",
+    "smartteamOutputs.setRgbLed": "Ajusta un LED RGB de un puerto del shield SmartTeam con valores rojo, verde y azul.",
+    "smartteamOutputs.setRgbLed|param|blue": "valor azul de 0 a 255",
+    "smartteamOutputs.setRgbLed|param|green": "valor verde de 0 a 255",
+    "smartteamOutputs.setRgbLed|param|led": "LED RGB a ajustar",
+    "smartteamOutputs.setRgbLed|param|port": "puerto del shield SmartTeam",
+    "smartteamOutputs.setRgbLed|param|red": "valor rojo de 0 a 255",
+    "smartteamOutputs.setRgbLedsColor": "Ajusta todos los LEDs RGB o un LED RGB de un puerto del shield SmartTeam a un color predefinido.",
+    "smartteamOutputs.setRgbLedsColor|param|color": "color RGB predefinido",
+    "smartteamOutputs.setRgbLedsColor|param|led": "LED RGB a ajustar",
+    "smartteamOutputs.setRgbLedsColor|param|port": "puerto del shield SmartTeam",
     "smartteamOutputs.startMelody": "Inicia una melodía integrada en el zumbador.",
     "smartteamOutputs.startMelody|param|melody": "melodía a iniciar",
     "smartteamOutputs.startMelody|param|mode": "modo de reproducción",
@@ -843,6 +873,27 @@ const INPUTS_JSDOC = {
   }
 };
 
+const SHIELD_STR = {
+  "es-ES": {
+    "smartteamShield.SmartTeamPort.Port0|block": "Puerto 0",
+    "smartteamShield.SmartTeamPort.Port1|block": "Puerto 1",
+    "smartteamShield.SmartTeamPort.Port2|block": "Puerto 2",
+    "smartteamShield.SmartTeamPort.Port3|block": "Puerto 3"
+  }
+};
+
+const SHIELD_JSDOC = {
+  "es-ES": {
+    "smartteamShield.SmartTeamPort": "Puertos RJ visibles para estudiantes en el shield SmartTeam.",
+    "smartteamShield.analogPinForPort": "Devuelve el pin principal con capacidad analógica de un puerto del shield SmartTeam.",
+    "smartteamShield.analogPinForPort|param|port": "puerto del shield SmartTeam",
+    "smartteamShield.digitalPinForPort": "Devuelve el pin principal digital de un puerto del shield SmartTeam.",
+    "smartteamShield.digitalPinForPort|param|port": "puerto del shield SmartTeam",
+    "smartteamShield.portIndex": "Devuelve un índice estable para un puerto del shield SmartTeam.",
+    "smartteamShield.portIndex|param|port": "puerto del shield SmartTeam"
+  }
+};
+
 function mergeDeep(base, extra) {
   const out = { ...base };
   if (extra) for (const k of Object.keys(extra)) out[k] = extra[k];
@@ -881,9 +932,12 @@ for (const lang of LANGS) {
 
   const inJ = fillMissingJsdoc(lang, "smartteam-inputs", "_locales/smartteam-inputs-jsdoc-strings.json", INPUTS_JSDOC);
   writeMerged(path.join(root, "libs/smartteam-inputs"), "smartteam-inputs", lang, INPUTS_STR[lang], inJ, "_locales/smartteam-inputs-strings.json", "_locales/smartteam-inputs-jsdoc-strings.json");
+
+  const shieldJ = fillMissingJsdoc(lang, "smartteam-shield", "_locales/smartteam-shield-jsdoc-strings.json", SHIELD_JSDOC);
+  writeMerged(path.join(root, "libs/smartteam-shield"), "smartteam-shield", lang, SHIELD_STR[lang], shieldJ, "_locales/smartteam-shield-strings.json", "_locales/smartteam-shield-jsdoc-strings.json");
 }
 
-for (const pkg of ["smartteam-core", "smartteam-outputs", "smartteam-motors", "smartteam-inputs"]) {
+for (const pkg of ["smartteam-core", "smartteam-outputs", "smartteam-motors", "smartteam-inputs", "smartteam-shield"]) {
   const p = path.join(root, "libs", pkg, "pxt.json");
   const cfg = JSON.parse(fs.readFileSync(p, "utf8"));
   const pkgLocaleFiles = LANGS.flatMap((lang) => [

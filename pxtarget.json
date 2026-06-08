@@ -21,6 +21,8 @@
         "libs/fonts",
         "libs/color",
         "libs/audio-recording",
+        "libs/neopixel",
+        "libs/smartteam-shield",
         "libs/smartteam-core",
         "libs/smartteam-outputs",
         "libs/smartteam-motors",

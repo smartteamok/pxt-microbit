@@ -1,0 +1,9 @@
+{
+  "smartteamShield.SmartTeamPort": "Student-facing RJ ports on the SmartTeam shield.",
+  "smartteamShield.analogPinForPort": "Return the primary analog-capable signal pin for a SmartTeam shield port.",
+  "smartteamShield.analogPinForPort|param|port": "SmartTeam shield port",
+  "smartteamShield.digitalPinForPort": "Return the primary digital signal pin for a SmartTeam shield port.",
+  "smartteamShield.digitalPinForPort|param|port": "SmartTeam shield port",
+  "smartteamShield.portIndex": "Return a stable array index for a SmartTeam shield port.",
+  "smartteamShield.portIndex|param|port": "SmartTeam shield port"
+}

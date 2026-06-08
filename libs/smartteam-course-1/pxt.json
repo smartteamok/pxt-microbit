@@ -42,6 +42,7 @@
             "smartteam_control_stopwatch": "hidden",
             "smartteam_outputs_rgb_leds_color": "hidden",
             "smartteam_outputs_rgb_leds_rgb": "hidden",
+            "smartteam_outputs_rgb_leds_clear": "hidden",
             "smartteam_motors_servo_set_angle": "hidden",
             "smartteam_motors_servo_move_gradually": "hidden",
             "smartteam_motors_robot_move": "hidden",

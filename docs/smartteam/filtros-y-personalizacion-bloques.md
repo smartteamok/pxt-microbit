@@ -33,6 +33,8 @@ Guía corta: qué archivos tocar y en qué orden. Detalle amplio: [Blocks and Fi
 
 **Si un bloque no debe verse en un grado:** agregar su `blockId` con `"hidden"` en `toolboxFilter.blocks` de los `pxt.json` de curso correspondientes (y rebuild).
 
+**RGB / NeoPixel:** los bloques de LEDs RGB viven en `libs/smartteam-outputs/main.ts`, grupo `RGB`, y usan el mapeo de puertos de `libs/smartteam-shield`. Sus IDs son `smartteam_outputs_rgb_leds_color`, `smartteam_outputs_rgb_leds_rgb` y `smartteam_outputs_rgb_leds_clear`; 1° los oculta en `toolboxFilter.blocks` y 2° en adelante los deja visibles.
+
 ## 3. Categorías nativas (solo presentación)
 
 **Archivo:** `editor/extension.tsx` → `smartTeamNativeToolbox`.  

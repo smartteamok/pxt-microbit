@@ -1,0 +1,12 @@
+{
+    "name": "neopixel",
+    "description": "Minimal NeoPixel driver for bundled SmartTeam blocks.",
+    "files": [
+        "README.md",
+        "neopixel.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

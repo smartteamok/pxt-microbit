@@ -1,0 +1,9 @@
+{
+  "smartteamShield.SmartTeamPort": "Puertos RJ visibles para estudiantes en el shield SmartTeam.",
+  "smartteamShield.analogPinForPort": "Devuelve el pin principal con capacidad analógica de un puerto del shield SmartTeam.",
+  "smartteamShield.analogPinForPort|param|port": "puerto del shield SmartTeam",
+  "smartteamShield.digitalPinForPort": "Devuelve el pin principal digital de un puerto del shield SmartTeam.",
+  "smartteamShield.digitalPinForPort|param|port": "puerto del shield SmartTeam",
+  "smartteamShield.portIndex": "Devuelve un índice estable para un puerto del shield SmartTeam.",
+  "smartteamShield.portIndex|param|port": "puerto del shield SmartTeam"
+}

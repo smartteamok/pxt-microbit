@@ -1,0 +1,13 @@
+{
+  "NeoPixelMode": "Different byte orders for RGB NeoPixel strips.",
+  "neopixel": "Minimal NeoPixel strip support for SmartTeam bundled blocks.",
+  "neopixel.Strip": "A NeoPixel strip.",
+  "neopixel.create": "Create a new NeoPixel driver for a strip.",
+  "neopixel.create|param|mode": "RGB byte order",
+  "neopixel.create|param|numleds": "number of LEDs in the strip",
+  "neopixel.create|param|pin": "the pin where the NeoPixel strip is connected",
+  "neopixel.rgb": "Convert red, green, and blue channels into an RGB color.",
+  "neopixel.rgb|param|blue": "blue value from 0 to 255",
+  "neopixel.rgb|param|green": "green value from 0 to 255",
+  "neopixel.rgb|param|red": "red value from 0 to 255"
+}

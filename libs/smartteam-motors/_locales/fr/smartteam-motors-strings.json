@@ -7,6 +7,6 @@
   "smartteamMotors|block": "Moteurs",
   "{id:category}SmartteamMotors": "SmartteamMotors",
   "{id:group}DC Motor": "Moteur DC",
-  "{id:group}Robot movement": "Mouvement du robot",
-  "{id:group}Servo": "Servo"
+  "{id:group}Servo": "Servo",
+  "{id:group}Robot movement": "Mouvement du robot"
 }

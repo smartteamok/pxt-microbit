@@ -7,6 +7,6 @@
   "smartteamMotors|block": "电机",
   "{id:category}SmartteamMotors": "SmartteamMotors",
   "{id:group}DC Motor": "直流电机",
-  "{id:group}Robot movement": "机器人运动",
-  "{id:group}Servo": "舵机"
+  "{id:group}Servo": "舵机",
+  "{id:group}Robot movement": "机器人运动"
 }

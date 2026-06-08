@@ -1,0 +1,6 @@
+{
+  "NeoPixelMode.RGB_RGB|block": "RGB (RGB format)",
+  "NeoPixelMode.RGB|block": "RGB (GRB format)",
+  "neopixel|block": "neopixel",
+  "{id:category}Neopixel": "Neopixel"
+}

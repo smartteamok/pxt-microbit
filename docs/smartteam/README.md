@@ -17,6 +17,7 @@ Documents:
 - [Architecture](architecture.md): target structure and responsibilities.
 - [Category Taxonomy](category-taxonomy.md): toolbox categories, owners, order, colors, and native category policy.
 - [Course Filtering](course-filtering.md): grade-based filtering model.
+- [Shield Port Mapping](shield-port-mapping.md): SmartTeam shield `Puerto 0` through `Puerto 3` pin mapping and maintenance rules.
 - [Blocks and Filters Guide](blocks-and-filters-guide.md): operational recipes for adding/changing blocks, filters, categories, groups, and colors.
 - [Filtros y personalización de bloques](filtros-y-personalizacion-bloques.md): guía breve (archivos, pasos, rebuild).
 - [Bloques: función y creación](bloques-funcion-y-creacion.md): código en `main.ts`, locales, cursos, paquete nuevo.

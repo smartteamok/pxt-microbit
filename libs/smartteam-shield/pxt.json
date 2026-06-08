@@ -1,0 +1,43 @@
+{
+    "name": "smartteam-shield",
+    "description": "SmartTeam shield port mapping helpers.",
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/ca/smartteam-shield-jsdoc-strings.json",
+        "_locales/ca/smartteam-shield-strings.json",
+        "_locales/de/smartteam-shield-jsdoc-strings.json",
+        "_locales/de/smartteam-shield-strings.json",
+        "_locales/es-ES/smartteam-shield-jsdoc-strings.json",
+        "_locales/es-ES/smartteam-shield-strings.json",
+        "_locales/fr/smartteam-shield-jsdoc-strings.json",
+        "_locales/fr/smartteam-shield-strings.json",
+        "_locales/it/smartteam-shield-jsdoc-strings.json",
+        "_locales/it/smartteam-shield-strings.json",
+        "_locales/ja/smartteam-shield-jsdoc-strings.json",
+        "_locales/ja/smartteam-shield-strings.json",
+        "_locales/ko/smartteam-shield-jsdoc-strings.json",
+        "_locales/ko/smartteam-shield-strings.json",
+        "_locales/nl/smartteam-shield-jsdoc-strings.json",
+        "_locales/nl/smartteam-shield-strings.json",
+        "_locales/pl/smartteam-shield-jsdoc-strings.json",
+        "_locales/pl/smartteam-shield-strings.json",
+        "_locales/pt-BR/smartteam-shield-jsdoc-strings.json",
+        "_locales/pt-BR/smartteam-shield-strings.json",
+        "_locales/pt-PT/smartteam-shield-jsdoc-strings.json",
+        "_locales/pt-PT/smartteam-shield-strings.json",
+        "_locales/ru/smartteam-shield-jsdoc-strings.json",
+        "_locales/ru/smartteam-shield-strings.json",
+        "_locales/sv-SE/smartteam-shield-jsdoc-strings.json",
+        "_locales/sv-SE/smartteam-shield-strings.json",
+        "_locales/tr/smartteam-shield-jsdoc-strings.json",
+        "_locales/tr/smartteam-shield-strings.json",
+        "_locales/zh-CN/smartteam-shield-jsdoc-strings.json",
+        "_locales/zh-CN/smartteam-shield-strings.json"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "microphone": "file:../microphone"
+    }
+}
