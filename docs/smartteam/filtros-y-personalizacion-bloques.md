@@ -2,21 +2,23 @@
 
 Guía corta: qué archivos tocar y en qué orden. Detalle amplio: [Blocks and Filters Guide](blocks-and-filters-guide.md) y [Course Filtering](course-filtering.md).
 
-## 1. Visibilidad por grado (filtros)
+## 1. Visibilidad por perfil (filtros) — modelo allow-list
 
-**Archivo:** `libs/smartteam-course-<N>/pxt.json` (`<N>` = 1 … 6).
+**Archivo:** `editor/smartteam/profiles.ts` (fuente única de verdad). Los `pxt.json` de curso ya **no** llevan `toolboxFilter`: solo dependencias.
 
-**Campo:** `toolboxFilter`
+**Modelo:** allow-list. Cada perfil tiene un `filter`:
 
-- **`namespaces`:** clave = id de categoría/namespace en MakeCode (ej. `logic`, `led`, `control`). Para matemáticas usar **`Math`** (mayúscula), no `math`.
-- **`blocks`:** clave = **`blockId`** exacto del bloque (`//% blockId=...` en el código fuente).
-
-**Valores:** `"hidden"` | `"visible"` | `"disabled"`.
+- **`defaultState`:** `"hidden"` para cursos curados (todo oculto salvo lo permitido) · `"visible"` para "Modo libre" (todo visible).
+- **`visibleBlocks`:** lista de **`blockId`** a mostrar cuando el default es `"hidden"`. Agregar un bloque nuevo a un grado = añadir su id aquí (o a `COMMON_VISIBLE`). Si no se agrega, queda oculto automáticamente; **no hay que ocultar bloques futuros uno por uno**.
+- **`hiddenBlocks`:** lista opcional para ocultar explícitamente (sobre todo en "Modo libre").
+- **`namespaces`:** categorías a revelar cuando el default es `"hidden"`. Para matemáticas usar **`Math`** (mayúscula), no `math`.
 
 **Reglas:**
 
-- Lo que no aparece en el mapa no pasa por el filtro explícito; en la práctica suele mostrarse lo que el proyecto ya carga. Para ocultar algo de forma clara, listarlo con `"hidden"`.
-- El curso debe declarar en **`dependencies`** el paquete que define el bloque. Sin dependencia, el bloque no existe en el proyecto aunque el filtro diga `"visible"`.
+- El blockId debe existir realmente. `node scripts/validate-toolbox-filters.js` valida la lista contra el inventario (`docs/smartteam/native-blocks-inventory.generated.md`) y corre en CI.
+- El paquete del perfil (`dependencies` del perfil) debe traer el lib que define el bloque. Sin dependencia, el bloque no existe aunque esté en `visibleBlocks`.
+- **Nuevas modalidades:** agregar otra entrada a `PROFILES` (con su `group`, p.ej. `"Modos"`); el selector las agrupa solo.
+- El filtro se inyecta en runtime (gana sobre el `toolboxFilter` de paquete). Tras editar: `npx pxt buildtarget`.
 
 **Después de editar:** `npx pxt buildtarget`. El editor lee el filtro desde el `pxt.json` empaquetado (`bundledpkgs`), no desde el archivo del repo en caliente sin rebuild.
 

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pxt-serve",
+      "runtimeExecutable": "pxt",
+      "runtimeArgs": ["serve", "--noBrowser", "--noSerial", "--just", "--port", "3232"],
+      "port": 3232
+    }
+  ]
+}

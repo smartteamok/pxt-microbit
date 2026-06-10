@@ -56,6 +56,9 @@ jobs:
           DISPLAY: :99.0
           CI: true
 
+      - name: validate SmartTeam toolbox filters
+        run: node scripts/validate-toolbox-filters.js
+
   buildvtag:
     # This job is a duplicate of pxt-buildvtag.yml's workflow
     name: buildvtag

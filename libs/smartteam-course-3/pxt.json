@@ -1,6 +1,6 @@
 {
     "name": "smartteam-course-3",
-    "description": "SmartTeam course profile for 3rd grade.",
+    "description": "SmartTeam course profile for 3rd grade. Toolbox visibility is owned by the editor profile (editor/smartteam/profiles.ts), injected at runtime as an allow-list.",
     "files": [
         "main.ts",
         "README.md"
@@ -14,41 +14,5 @@
         "smartteam-outputs": "file:../smartteam-outputs",
         "smartteam-motors": "file:../smartteam-motors",
         "smartteam-inputs": "file:../smartteam-inputs"
-    },
-    "toolboxFilter": {
-        "namespaces": {
-            "basic": "hidden",
-            "input": "hidden",
-            "music": "hidden",
-            "led": "hidden",
-            "light": "hidden",
-            "pins": "hidden",
-            "serial": "hidden",
-            "radio": "hidden",
-            "control": "hidden",
-            "game": "hidden",
-            "images": "hidden",
-            "arrays": "hidden",
-            "text": "hidden",
-            "variables": "hidden",
-            "functions": "hidden"
-        },
-        "blocks": {
-            "smartteam_control_while": "hidden",
-            "smartteam_control_start_stopwatch": "hidden",
-            "smartteam_control_stopwatch": "hidden",
-            "smartteam_inputs_touch_pin": "hidden",
-            "smartteam_inputs_temperature_pin": "hidden",
-            "smartteam_inputs_ultrasonic_pin": "hidden",
-            "smartteam_inputs_line_follower": "hidden",
-            "smartteam_inputs_light_pin": "hidden",
-            "smartteam_inputs_soil_pin": "hidden",
-            "smartteam_inputs_potentiometer_pin": "hidden",
-            "smartteam_inputs_joystick_axis": "hidden",
-            "smartteam_motors_robot_move": "hidden",
-            "smartteam_motors_robot_move_speed": "hidden",
-            "smartteam_motors_robot_motor_turn": "hidden",
-            "smartteam_motors_robot_motor_turn_speed": "hidden"
-        }
     }
 }

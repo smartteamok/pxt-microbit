@@ -1,6 +1,20 @@
 # Course Filtering
 
-## Single Source of Truth
+> **Updated model (profiles + allow-list).** Toolbox visibility now lives in
+> **`editor/smartteam/profiles.ts`** as the single source of truth, not in the
+> course `pxt.json` files (those were emptied of `toolboxFilter` and only carry
+> dependencies now). The model is an **allow-list**: curated profiles use
+> `defaultState: "hidden"` plus an explicit `visibleBlocks` list, so new blocks
+> never leak into a grade until allowed. A `"free"` profile uses
+> `defaultState: "visible"` to show everything. Profiles generalize grades, so
+> non-grade modalities (free mode, by-kit, by-difficulty) are added by appending
+> to the `PROFILES` array. `scripts/validate-toolbox-filters.js` checks every
+> profile block id against the real inventory (see
+> [native-blocks-inventory.md](native-blocks-inventory.md)). The sections below
+> describe the previous package-`toolboxFilter` model and are kept for historical
+> context.
+
+## Single Source of Truth (historical: package toolboxFilter model)
 
 `libs/smartteam-course-<N>/pxt.json` is the only place where grade-specific toolbox visibility is declared. The editor reads this metadata at runtime; nothing in `editor/extension.tsx` re-declares it.
 

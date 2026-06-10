@@ -1,6 +1,6 @@
 {
     "name": "smartteam-course-5",
-    "description": "SmartTeam course profile for 5th grade.",
+    "description": "SmartTeam course profile for 5th grade. Toolbox visibility is owned by the editor profile (editor/smartteam/profiles.ts), injected at runtime as an allow-list.",
     "files": [
         "main.ts",
         "README.md"
@@ -14,25 +14,5 @@
         "smartteam-outputs": "file:../smartteam-outputs",
         "smartteam-motors": "file:../smartteam-motors",
         "smartteam-inputs": "file:../smartteam-inputs"
-    },
-    "toolboxFilter": {
-        "namespaces": {
-            "basic": "hidden",
-            "input": "hidden",
-            "music": "hidden",
-            "led": "hidden",
-            "light": "hidden",
-            "pins": "hidden",
-            "serial": "hidden",
-            "radio": "hidden",
-            "control": "hidden",
-            "game": "hidden",
-            "images": "hidden",
-            "arrays": "hidden"
-        },
-        "blocks": {
-            "function_definition_return": "hidden",
-            "function_return_if": "hidden"
-        }
     }
 }

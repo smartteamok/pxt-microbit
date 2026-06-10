@@ -1,6 +1,6 @@
 {
     "name": "smartteam-course-1",
-    "description": "SmartTeam course profile for 1st grade.",
+    "description": "SmartTeam course profile for 1st grade. Toolbox visibility is owned by the editor profile (editor/smartteam/profiles.ts), injected at runtime as an allow-list.",
     "files": [
         "main.ts",
         "README.md"
@@ -13,49 +13,5 @@
         "smartteam-core": "file:../smartteam-core",
         "smartteam-outputs": "file:../smartteam-outputs",
         "smartteam-motors": "file:../smartteam-motors"
-    },
-    "toolboxFilter": {
-        "namespaces": {
-            "basic": "hidden",
-            "input": "hidden",
-            "music": "hidden",
-            "led": "hidden",
-            "light": "hidden",
-            "pins": "hidden",
-            "serial": "hidden",
-            "radio": "hidden",
-            "control": "hidden",
-            "game": "hidden",
-            "images": "hidden",
-            "arrays": "hidden",
-            "logic": "hidden",
-            "Math": "hidden",
-            "text": "hidden",
-            "variables": "hidden",
-            "functions": "hidden"
-        },
-        "blocks": {
-            "smartteam_control_if_then": "hidden",
-            "smartteam_control_on_logo_pressed": "hidden",
-            "smartteam_control_while": "hidden",
-            "smartteam_control_start_stopwatch": "hidden",
-            "smartteam_control_stopwatch": "hidden",
-            "smartteam_outputs_rgb_leds_color": "hidden",
-            "smartteam_outputs_rgb_leds_rgb": "hidden",
-            "smartteam_outputs_rgb_leds_clear": "hidden",
-            "smartteam_motors_servo_set_angle": "hidden",
-            "smartteam_motors_servo_move_gradually": "hidden",
-            "smartteam_motors_robot_move": "hidden",
-            "smartteam_motors_robot_move_speed": "hidden",
-            "smartteam_motors_robot_motor_turn": "hidden",
-            "smartteam_motors_robot_motor_turn_speed": "hidden",
-            "device_while": "hidden",
-            "pxt_controls_for": "hidden",
-            "pxt_controls_for_of": "hidden",
-            "every_interval": "hidden",
-            "controls_flow_statements": "hidden",
-            "break_keyword": "hidden",
-            "continue_keyword": "hidden"
-        }
     }
 }
