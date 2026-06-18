@@ -5,6 +5,10 @@
                 "tags": [ "Lights and Display" ],
                 "preferred": true
             },
+            "smartteamok/smartteam-ml-bluetooth": {
+                "tags": [ "SmartTEAM" ],
+                "preferred": true
+            },
             "microbit-apps/display-shield": {
                 "tags": [ "Lights and Display" ],
                 "simx": {
@@ -470,7 +474,8 @@
             }
         },
         "approvedEditorExtensionUrls": [
-            "https://microsoft.github.io/ml4f/"
+            "https://microsoft.github.io/ml4f/",
+            "https://smartteamok.github.io/smartteam-ml-editorext/"
         ],
         "extensionsToolboxDisallowDelete": [
         ]
