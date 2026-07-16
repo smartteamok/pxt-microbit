@@ -424,7 +424,6 @@
         "errorList": true,
         "workspaceSearch": true,
         "allowPackageExtensions": true,
-        "allowParentController": true,
         "addNewTypeScriptFile": true,
         "enabledFeatures": {
             "blocksErrorList": {},
